@@ -1,29 +1,72 @@
-# Navigating CURC Documentation
+# Navigating the NMT HPC Documentation
 
-CU Research Computing (CURC) offers a variety of services encompassing High Performance Computing (HPC), cloud computing assistance, and storage solutions. Many of these services are available to users associated with CU Boulder, Anschutz Medical Campus (AMC), Colorado State University (CSU), and institutions that are members of the Rocky Mountain Advanced Computing Consortium (RMACC). Our team understands that navigating the various services we provide can be overwhelming for both new and experienced users. To aid users, we have constructed flowcharts that outline the core areas of our documentation that every user on our system should become familiar with. Please refer to the section [High Performance Computing Flowchart](#high-performance-computing-flowchart) for a diagram of how to navigate our HPC systems (clusters) and storage solutions. For a diagram of the various cloud computing resources we can assist you with, please refer to the [Cloud Computing Flowchart](#cloud-computing-flowchart) section. 
+Welcome to the New Mexico Tech High Performance Computing documentation! This guide will help you find the information you need to effectively use our HPC cluster.
 
-## High Performance Computing Flowchart
+## Documentation Structure
 
-At CURC, we host two HPC clusters, Alpine and Blanca, along with various storage solutions. Before you utilize these resources, there are several items that you should take into consideration. To guide users, we've included a flowchart below that highlights the key areas users should focus on.
+Our documentation is organized into four main sections:
+
+### 1. Getting Started
+
+Perfect for new users or those looking for quick answers:
+
+- **[Accounts and System Login](accounts_login.md)**: Learn how to get an account and connect to NMTHPC
+- **[Frequently Asked Questions](faq.md)**: Quick answers to common questions
+- **[Acknowledging NMTHPC](acknowledging_nmthpc.md)**: How to cite NMTHPC resources in publications
+
+### 2. Computing Environment
+
+Information about the system architecture and available resources:
+
+- **[Nodes and Filesystems](../computing_environment/nodes_filesystems.md)**: Hardware specifications and storage systems
+- **[Software Available on NMTHPC](../computing_environment/software.md)**: Installed applications and modules
+- **[Transferring Data](../computing_environment/data_transfer.md)**: Methods for moving data to and from the cluster
+- **[Monitoring Resources](../computing_environment/monitoring_resources.md)**: Tools for tracking job status and resource usage
+- **[Partitions and QOS](../computing_environment/partitions_qos.md)**: Understanding job queues and priorities
+
+### 3. Using NMTHPC
+
+Practical guides for running your computational work:
+
+- **[Running Interactive Jobs](../using_nmthpc/interactive_jobs.md)**: Start interactive sessions for testing and development
+- **[Running Batch Jobs and SLURM Basics](../using_nmthpc/batch_jobs.md)**: Submit jobs to run without manual intervention
+- **[Using SLURM Job Arrays](../using_nmthpc/job_arrays.md)**: Run many similar jobs efficiently
+- **[Running Jobs on GPU Nodes](../using_nmthpc/gpu_jobs.md)**: Utilize GPU resources for accelerated computing
+
+### 4. Software and Examples
+
+Detailed guides for specific applications:
+
+- **[Anaconda](../software/anaconda.md)**: Python environment management
+- **[Python and Jupyter Notebooks](../software/python_jupyter.md)**: Interactive Python development
+- **[Training AI/ML Models on GPUs](../software/ai_ml_gpu.md)**: Machine learning workflows
+- **[R](../software/r.md)**: Statistical computing with R
+- **[MATLAB](../software/matlab.md)**: Running MATLAB on the cluster
+- **[VASP](../software/vasp.md)**: Density functional theory calculations
+- **[Using MPI with Fortran](../software/mpi_fortran.md)**: Parallel programming
+
+## Tips for Finding Information
 
 ```{tip}
-In the flowchart below, you can easily navigate to the corresponding documentation page by clicking on the relevant node. Nodes that change color when hovered over are clickable.
+**Quick Search**: Use your browser's find function (Ctrl+F or Cmd+F) to search within a page for specific keywords.
 ```
-
-```{eval-rst}
-.. raw:: html
-    :file: ../../graphviz_flowcharts/generated_images/getting_started_hpc_flowchart.svg
-```
-
-## Cloud Computing Flowchart
-
-The Cloud Foundations Service (CFS) at CURC provides an additional layer of support between the cloud provider and the customer. The purpose of CFS is to manage the integration of the cloud with CU standards. Specifically, CFS provides assistance with the provisioning of public cloud accounts (AWS, Azure, GCP), cost estimation, billing against CU funds, CU internal network connection, consulting, and high-level architectural guidance. It should be noted that CFS customers are expected to manage their applications, data, and use of cloud services. Below we provide a flowchart that we believe identifies the key areas users of these services should read. 
 
 ```{tip}
-In the flowchart below, you can easily navigate to the corresponding documentation page by clicking on the relevant node. Nodes that change color when hovered over are clickable.
+**Common Workflows**:
+- First time user? Start with [Accounts and System Login](accounts_login.md)
+- Ready to run jobs? Go to [Running Batch Jobs](../using_nmthpc/batch_jobs.md)
+- Need specific software? Check [Software Available on NMTHPC](../computing_environment/software.md)
+- GPU computing? See [Running Jobs on GPU Nodes](../using_nmthpc/gpu_jobs.md)
 ```
 
-```{eval-rst}
-.. raw:: html
-    :file: ../../graphviz_flowcharts/generated_images/getting_started_cloud_flowchart.svg
-```
+## Getting Help
+
+If you can't find what you're looking for in the documentation:
+
+1. Check the [FAQ](faq.md) for common questions
+2. Contact our support team at <hpc-support@nmt.edu>
+3. Include relevant details: job IDs, error messages, and what you've already tried
+
+## Contributing to Documentation
+
+Notice an error or have a suggestion? We welcome contributions to improve this documentation. Please contact the HPC support team with your feedback.

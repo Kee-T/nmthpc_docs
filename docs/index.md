@@ -1,19 +1,21 @@
-# NMT Cluster User Guide
+# New Mexico Tech High Performance Computing Documentation
 
-Test - NMTHPC doc.
+Welcome to the New Mexico Tech High Performance Computing (NMTHPC) documentation. This guide provides comprehensive information about accessing, using, and optimizing your work on our HPC cluster.
 
+## About NMTHPC
+
+The NMT HPC cluster is a high-performance computing resource designed to support research and education at New Mexico Tech. Our system features:
+
+- **{{nmthpc_total_cpu_nodes}}** CPU compute nodes for general-purpose computing
+- **{{nmthpc_total_gpu_nodes}}** {{nmthpc_gpu_type}} GPU nodes for accelerated computing and AI/ML workloads
+- Two high-performance filesystems: **{{nmthpc_filesystem_1}}** and **{{nmthpc_filesystem_2}}**
+- SLURM job scheduler for efficient resource management
 
 ```{tip}
-- Documentation can be overwhelming. If you would like guidance on navigating CURC documentation, please see our [Navigating CURC Documentation](./getting_started/navigating_docs.md) page.
-- Can't find what you need or want to contribute to our documentation? Please see our [Contributing to CURC Documentation](./additional-resources/contrib_curc_docs.md) page.   
-- To provide feedback on CURC services, please see our [We want to hear from you!](./additional-resources/feedback) page.
-- For more information on the CU Research Computing group, please see <https://www.colorado.edu/rc>.
-- If you have any questions on documentation or CURC services, please feel free to contact our user support team at <rc-help@colorado.edu>.
+- New to HPC or NMTHPC? Start with our [Navigating the NMT HPC Documentation](./getting_started/navigating_docs.md) page
+- Need help? Contact our support team at hpc-support@nmt.edu
+- Looking for specific software? Check our [Software Available on NMTHPC](./computing_environment/software.md) page
 ```
-
-## Meet the RC User Support Team!
-
-![The RC User Support team](./landing_page_images/MeetTheUserSupportTeam.png)
 
 ----
 
@@ -25,142 +27,43 @@ Test - NMTHPC doc.
 :caption: Getting Started
 
 getting_started/navigating_docs
-getting_started/logging-in
+getting_started/accounts_login
 getting_started/faq
-getting_started/current-sem-trainings
-getting_started/acknowledge_curc_resources
+getting_started/acknowledging_nmthpc
 ```
 
 ```{toctree}
 :maxdepth: 1
-:caption: The Compute Environment
+:caption: Computing Environment
 
-compute/node-types
-compute/filesystems
-compute/modules
-compute/data-transfer
-compute/compiling
-compute/monitoring-resources
-
+computing_environment/nodes_filesystems
+computing_environment/software
+computing_environment/data_transfer
+computing_environment/monitoring_resources
+computing_environment/partitions_qos
 ```
 
 ```{toctree}
 :maxdepth: 1
-:caption: Clusters
+:caption: Using NMTHPC
 
-clusters/alpine/index
-clusters/blanca/blanca
-clusters/summit/summit
-
-```
-
-```{toctree}
-:maxdepth: 2
-:caption: Portals & Gateways
-
-open_ondemand/index
-
+using_nmthpc/interactive_jobs
+using_nmthpc/batch_jobs
+using_nmthpc/job_arrays
+using_nmthpc/gpu_jobs
 ```
 
 ```{toctree}
 :maxdepth: 1
-:caption: Running Jobs
+:caption: Software and Examples
 
-running-jobs/batch-jobs
-running-jobs/interactive-jobs
-running-jobs/running-apps-with-jobs
-running-jobs/job-arrays
-running-jobs/roce-enabled
-running-jobs/job-resources
-running-jobs/slurm-commands
-running-jobs/squeue-status-codes
-
-```
-
-```{toctree}
-:maxdepth: 2
-:caption: PetaLibrary
-
-petalibrary/index
-petalibrary/allocation_types
-petalibrary/ownership
-petalibrary/billing
-petalibrary/data_transfer
-petalibrary/usage_statistics
-petalibrary/zfs_snapshots
-
-```
-   
-```{toctree}
-:maxdepth: 2
-:caption: Cloud
-
-cloud/aws/index
-cloud/azure/index
-cloud/gcp/index
-cloud/cumulus
-
-```
-
-```{toctree}
-:maxdepth: 2
-:caption: AI/ML
-
-ai-ml/ai-resources
-ai-ml/llms
-
-```
-
-```{toctree}
-:maxdepth: 2
-:caption: Software
-
-software/curc_provided_software
-software/loadbalancer
-software/gaussian
+software/anaconda
+software/python_jupyter
+software/ai_ml_gpu
+software/r
 software/matlab
-software/python
-software/GNUParallel
 software/vasp
-software/containerization
-software/alphafold
-software/spack
-software/sratoolkit
-software/uv
-
-```
-
-```{toctree}
-:maxdepth: 2
-:caption: Programming, Profiling, and Parallelization
-   
-programming/coding-best-practices
-programming/parallel-programming-fundamentals
-programming/MPIBestpractices
-programming/MPI-C
-programming/MPI-Fortran
-programming/OpenMP-C
-programming/OpenMP-Fortran
-programming/profiling-nvidia-gpu-performance
-
-```
-   
-```{toctree}
-:maxdepth: 1
-:caption: Additional resources
-
-additional-resources/policies
-additional-resources/courses_using_curc_resources
-additional-resources/feedback
-additional-resources/contrib_curc_docs
-additional-resources/CURC-cheatsheet
-additional-resources/amc_ssh_auth
-additional-resources/registrycilogon-instructions
-additional-resources/blanca-MOU
-additional-resources/facilities_equip_other
-additional-resources/biokem-facility
-additional-resources/csu-xsede-usernames
-
+software/mpi_fortran
 ```
 
 ::::

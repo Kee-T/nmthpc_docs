@@ -1,69 +1,133 @@
 # VASP
 
-The Vienna Ab initio Simulation Package ([VASP](https://www.vasp.at)) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics
+This guide covers using VASP (Vienna Ab initio Simulation Package) for density functional theory calculations on NMTHPC.
 
-VASP requires a license. Individual students or entire departments/faculties are not eligible, and therefore CU Research Computing does not have a VASP module for community use. Licenses are issued to well-defined research groups under the direction of a single chair, professor, or group leader at one single physical location.  Group leaders may [apply for a VASP license](https://www.vasp.at/sign_in/registration_form/), after which they will be given access to the source code. 
+## VASP License
 
-The documentation below demonstrates how to install and use VASP in one's `/projects/$USER` directory.  A typical case would be to install the software in the `/projects/$USER` directory of the group leader, and then make it available to group members by emailing rc-help@colorado.edu to request that they be added to the Linux user group of the group leader. 
-
-## Prerequisites
-* you have a copy of the source code
-* you are in a group that has a vasp license
-* you only use VASP for research purposes
-
-## Assumptions
-* the example below is for version 5.4.4; adjust version to match yours
-* the example below assumes the source code is in a tar.gz file; if the source code is in a directory, you can skip the "tar -xf" step
-* the example below assumes you will install the software in /projects/$USER/software; adjust as needed.
-* you have started an interactive job on alpine ("module load slurm/alpine; acompile")
-
-## To compile vasp
-```bash
-module purge
-module load intel/2022.1.2
-module load impi/2021.5.0
-module load mkl/2022.0.2
-cd /projects/$USER/software
-tar -xf vasp.5.4.4.tar.gz
-cd vasp.5.4.4
-cp arch/makefile.include.linux_intel ./makefile.include
-make
+```{warning}
+VASP is commercial software requiring a valid license. You must provide proof of license before accessing VASP on NMTHPC.
 ```
 
-## To use vasp (example job script)
+Contact <hpc-support@nmt.edu> with your VASP license information.
 
+## Loading VASP
+
+```bash
+$ module avail vasp
+$ module load vasp/6.4.0
+```
+
+## Running VASP
+
+### Basic VASP Calculation
+
+**Required input files**:
+- `INCAR`: Calculation parameters
+- `POSCAR`: Atomic positions
+- `POTCAR`: Pseudopotentials
+- `KPOINTS`: k-point mesh
+
+**Example SLURM script**:
 ```bash
 #!/bin/bash
+#SBATCH --job-name=vasp_calc
+#SBATCH --output=vasp_%j.out
+#SBATCH --ntasks=16
+#SBATCH --mem-per-cpu=4G
+#SBATCH --time=24:00:00
 
-#SBATCH --partition=amilan
-#SBATCH --qos=normal
-#SBATCH --nodes=1
-#SBATCH --ntasks=2
-#SBATCH --time=1:00:00
-#SBATCH --output=vasp.%j.out
-#SBATCH --job-name=vasp
-#SBATCH --constraint=ib
+module load vasp/6.4.0
 
-# this example draws on a the vasp tutorial at:
-#    https://www.vasp.at/tutorials/latest/bulk/part1/
-
-#download and unzip the tutorial files
-#and set up the POSCAR file (change "a" to "3.9")
-wget https://www.vasp.at/tutorials/latest/bulk-part1.zip
-tar -xf bulk-part1.zip
-unzip bulk-part1.zip
-cd bulk-part1/e01_fcc-Si/
-sed -i 's/a/3.9/g' ./POSCAR
-
-#load the required modules
-module purge
-module load intel/2022.1.2
-module load impi/2021.5.0
-module load mkl/2022.0.2
-
-# add the vasp bin directory to your path
-export PATH=$PATH:/projects/$USER/software/vasp.5.4.4/bin
-
-# run vasp
-mpirun -n ${SLURM_NTASKS} vasp_std
+mpirun vasp_std
 ```
+
+### VASP Variants
+
+**Standard version** (vasp_std):
+```bash
+mpirun vasp_std
+```
+
+**Gamma-point only** (vasp_gam):
+```bash
+mpirun vasp_gam
+```
+
+**Non-collinear** (vasp_ncl):
+```bash
+mpirun vasp_ncl
+```
+
+## GPU-Accelerated VASP
+
+**For GPU nodes**:
+```bash
+#!/bin/bash
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:1
+#SBATCH --ntasks=4
+#SBATCH --mem=64G
+#SBATCH --time=48:00:00
+
+module load vasp/6.4.0-gpu
+
+mpirun vasp_gpu
+```
+
+## Example Calculations
+
+### Structural Optimization
+
+**INCAR**:
+```
+ISTART = 0
+ICHARG = 2
+ENCUT = 500
+ISMEAR = 0
+SIGMA = 0.05
+IBRION = 2
+NSW = 100
+ISIF = 3
+EDIFFG = -0.01
+```
+
+### Band Structure
+
+**Step 1: Self-consistent calculation**:
+```
+ISTART = 0
+ICHARG = 2
+ENCUT = 500
+```
+
+**Step 2: Band structure** (INCAR):
+```
+ISTART = 1
+ICHARG = 11
+ENCUT = 500
+ICHARG = 11
+```
+
+## Best Practices
+
+1. **Test convergence**: k-points and ENCUT
+2. **Checkpointing**: VASP writes WAVECAR and CHGCAR
+3. **Monitor output**: Check OSZICAR during run
+4. **Resource requests**: Match tasks to system
+5. **Time limits**: DFT calculations can be long
+
+## Post-Processing
+
+**Extract energy**:
+```bash
+$ grep "free energy" OUTCAR | tail -1
+```
+
+**Parse OSZICAR**:
+```bash
+$ tail OSZICAR
+```
+
+## Questions?
+
+Contact <hpc-support@nmt.edu> for VASP support.
