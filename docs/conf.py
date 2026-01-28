@@ -12,7 +12,7 @@ myst_substitutions = {
    'nmthpc_total_cpu_nodes': '16',
    'nmthpc_total_gpu_nodes': '2',
    'nmthpc_gpu_type': 'NVIDIA H100',
-   'nmthpc_filesystem_1': 'ifs',
+   'nmthpc_filesystem_1': 'zfs',
    'nmthpc_filesystem_2': 'beefs',
 }
 
@@ -30,15 +30,15 @@ html_css_files = ["custom.css"]
 
 html_theme_options = {
    "logo": {
-      "image_light": "_static/Research_Computing_black_letters.png",
-      "image_dark": "_static/Research_Computing_white_letters.png",
+      "image_light": "_static/NMT_LOGO.png",
+      "image_dark": "_static/NMT_LOGO.png",
    },
    "repository_url": "https://github.com/nmtech/nmthpc_docs",
    "use_repository_button": True,
 }
 
 html_context = {
-   "default_mode": "dark"
+   "default_mode": "light"
 }
 
 copybutton_prompt_text = r'^\$ '
