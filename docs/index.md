@@ -66,4 +66,17 @@ software/vasp
 software/mpi_fortran
 ```
 
+```{toctree}
+:maxdepth: 1
+:caption: Programming tutorials
+
+programming/coding-best-practices
+programming/MPI-C
+programming/MPI-Fortran
+programming/OpenMP-C
+programming/OpenMP-Fortran
+programming/parallel-programming-fundamentals
+programming/profiling-nvidia-gpu-performance
+```
+
 ::::
