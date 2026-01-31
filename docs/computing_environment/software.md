@@ -166,7 +166,6 @@ $ module load tensorflow/2.13-gpu
 $ module load pytorch/2.0-gpu
 ```
 
-See [Training AI/ML Models on GPUs](../software/ai_ml_gpu.md) for detailed guidance.
 
 ### Scientific Applications
 

@@ -1,4 +1,9 @@
-This repo contains the source code for building the CU Research Computing user guide as found at https://curc.readthedocs.io. All user guide builds are available at https://readthedocs.org/projects/curc/.
+
+
+## Things to do
+
+- \\TODO: fix support email.
+- \\TODO: Ask Deep or some other VASP user to check and update the VASP documentation page.
 
 ## Research Computing User Tutorials
 

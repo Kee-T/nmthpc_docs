@@ -211,6 +211,4 @@ Check with HPC support about RStudio Server availability for browser-based R dev
 3. **Set random seed**: `set.seed(123)` for reproducibility
 4. **Use renv** for package management: `install.packages("renv")`
 
-## Questions?
 
-Contact <hpc-support@nmt.edu> for R support.

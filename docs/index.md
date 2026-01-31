@@ -66,13 +66,13 @@ using_nmthpc/gpu_jobs
 :maxdepth: 1
 :caption: Software and Examples
 
+software/software_overview
 software/anaconda
-software/python_jupyter
-software/ai_ml_gpu
+software/python
 software/r
 software/matlab
 software/vasp
-software/mpi_fortran
+software/spack
 ```
 
 ```{toctree}
