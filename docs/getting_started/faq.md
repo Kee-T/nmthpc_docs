@@ -24,42 +24,20 @@ Student accounts are reviewed annually. Faculty and staff accounts remain active
 
 ### Where should I store my files?
 
-NMTHPC has two main filesystems:
-
-- **Home directory** (\`/home/username\`): For personal files, scripts, and configuration. Limited quota.
-- **{{nmthpc_filesystem_1}}**: High-performance filesystem for active project data
-- **{{nmthpc_filesystem_2}}**: Additional storage filesystem for larger datasets
-
-See [Nodes and Filesystems](../computing_environment/nodes_filesystems.md) for more details.
+NMTHPC has two main filesystems. See [Nodes and Filesystems](../computing_environment/nodes_filesystems.md) for more details.
 
 ### What are the storage quotas?
 
-Storage quotas vary by filesystem. Check your current usage with:
+Storage quotas vary. Check your current usage with:
 
 \`\`\`bash
 $ quota -s
 \`\`\`
 
-Contact HPC support if you need additional storage space.
-
-### How do I transfer data to NMTHPC?
-
-Common methods include:
-
-- \`scp\` for small to medium files
-- \`rsync\` for synchronizing directories
-- \`sftp\` for interactive transfers
-- Globus for large datasets
-
-See [Transferring Data](../computing_environment/data_transfer.md) for detailed instructions.
 
 ### How do I back up my data?
 
-NMTHPC filesystems are not automatically backed up. You're responsible for backing up important data to other locations. Consider:
-
-- Copying critical data to your local machine
-- Using institutional storage services
-- Implementing version control (Git) for code
+NMTHPC filesystems are not automatically backed up. You're responsible for backing up important data to other locations. 
 
 ## Running Jobs
 
@@ -139,14 +117,7 @@ To cancel all your jobs:
 $ scancel -u $USER
 \`\`\`
 
-### My job failed. How do I find out why?
 
-1. Check the SLURM output file (usually \`slurm-JOBID.out\`)
-2. Review your job script for errors
-3. Check resource limits (memory, time)
-4. Look for error messages in your application's log files
-
-If you need help debugging, contact HPC support with your job ID.
 
 ## Software
 
@@ -179,7 +150,6 @@ Yes! You can:
 - Install Python packages in your home directory with \`pip install --user\`
 - Create Anaconda environments
 - Compile software in your home directory
-- Use containers (Singularity/Apptainer)
 
 See specific software guides in the [Software and Examples](../software/anaconda.md) section.
 
@@ -191,50 +161,12 @@ Contact HPC support at <hpc-support@nmt.edu> with:
 - Why you need it
 - Link to the software website
 
-We'll evaluate requests for system-wide installation.
 
-## GPU Computing
 
-### How do I request a GPU for my job?
-
-Use the \`--gres\` flag:
-
-\`\`\`bash
-$ srun --gres=gpu:1 --pty bash
-\`\`\`
-
-For batch jobs, add to your SLURM script:
-
-\`\`\`bash
-#SBATCH --gres=gpu:1
-\`\`\`
-
-See [Running Jobs on GPU Nodes](../using_nmthpc/gpu_jobs.md) for more details.
-
-### How do I check if my job is using the GPU?
-
-While your job is running on a GPU node:
-
-\`\`\`bash
-$ nvidia-smi
-\`\`\`
-
-This shows GPU utilization, memory usage, and running processes.
-
-### Which GPU libraries are available?
-
-NMTHPC provides:
-
-- CUDA toolkit
-- cuDNN for deep learning
-- TensorFlow and PyTorch with GPU support
-- NVIDIA HPC SDK
-
-See [Software Available on NMTHPC](../computing_environment/software.md) for versions.
 
 ## Best Practices
 
-### How can I be a good NMTHPC citizen?
+### How can I be a good NMTHPC user?
 
 - Don't run jobs on login nodes
 - Request only the resources you need
@@ -256,7 +188,6 @@ See [Software Available on NMTHPC](../computing_environment/software.md) for ver
 
 - Running computations on login nodes
 - Not specifying enough memory or time
-- Hard-coding paths instead of using variables
 - Not checking job status after submission
 - Ignoring error messages
 - Requesting more resources than needed
@@ -281,14 +212,3 @@ Include in your request:
 - **For login issues**: Error messages, your operating system
 - **For data transfer issues**: Transfer method, file sizes, error messages
 
-### How quickly will I get a response?
-
-We aim to respond to all requests within 1-2 business days. Urgent issues may receive faster attention.
-
-## Additional Questions?
-
-If your question isn't answered here, please:
-
-1. Search the full documentation using your browser's search function
-2. Check the relevant section of the documentation
-3. Contact HPC support at <hpc-support@nmt.edu>

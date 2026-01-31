@@ -4,16 +4,25 @@ Welcome to the New Mexico Tech High Performance Computing (NMTHPC) documentation
 
 ## About NMTHPC
 
-The NMT HPC cluster is a high-performance computing resource designed to support research and education at New Mexico Tech. Our system features:
+The High-Performance Computing system at New Mexico Tech – HPC@NMT – was established through a competitive National Science Foundation Major Research Instrumentation (NSF-MRI) award (#2320162) awarded in 2023:   The award, MRI: Track 1 Acquisition of a High-Performance Computing System at New Mexico Tech, provides funding for both the HPC instrumentation framework and undergraduate participation in system administration. 
 
-- **{{nmthpc_total_cpu_nodes}}** CPU compute nodes for general-purpose computing
-- **{{nmthpc_total_gpu_nodes}}** {{nmthpc_gpu_type}} GPU nodes for accelerated computing and AI/ML workloads
-- Two high-performance filesystems: **{{nmthpc_filesystem_1}}** and **{{nmthpc_filesystem_2}}**
-- SLURM job scheduler for efficient resource management
+The driving centerpiece of HPC@NMT will be the collaborative, transdisciplinary research that will result from having exponentially more resources available to our faculty and students. Over the course of the three year award, key research challenges the HPC system will be used to address include Seismogenic Processes and Hazards, Computational Biology and Bioinformatics, Computational Materials Science, and Multiphysics Groundwater Transport, Characterization, and Mapping. NMT@HPC aims to continually expand the computational capabilities to adapt to the ever growing needs and challenges of our local, state and national stakeholders. Long-term, the HPC@NMT team also aims to leverage the HPC system to develop curriculum and certificate programs in research computing and HPC system administration.
+
+## System Overview
+
+The HPC system funded by the MRI is designed to meet the wide range of research computing needs across campus. Key features of the AMD-based system include three types of compute nodes (standard, high memory, GPU), a parallel file system, and fast internal communication. 
+
+(16) Standard Nodes (256 cores, 6 Gb RAM per core)
+(3) High-Memory Nodes (256 cores, 9 Gb RAM per core)
+(3) GPU Nodes (128 Cores, 6 Gb RAM per core, NVIDIA H100 GPUs w/ 16896 CUDA Cores)
+(1) Login Node (128 cores, 6 Gb RAM per core)
+(1) 373 Tb HDD Storage Server
+(1) 500 Tb Parallel File System 
+
 
 ```{tip}
 - New to HPC or NMTHPC? Start with our [Navigating the NMT HPC Documentation](./getting_started/navigating_docs.md) page
-- Need help? Contact our support team at hpc-support@nmt.edu
+- Need additional help? Contact the support team. 
 - Looking for specific software? Check our [Software Available on NMTHPC](./computing_environment/software.md) page
 ```
 

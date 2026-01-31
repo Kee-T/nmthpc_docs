@@ -13,37 +13,40 @@ Acknowledging NMTHPC in your publications:
 
 ## Suggested Acknowledgment Text
 
+If this you use this system as part of a research project, please acknowledge acknowledge it  in journal articles or other media outlets as: 
+
+```{note}
+We are grateful for the computation time on the High Performance Computing resource at New Mexico Tech. HPC@NMT  was funded by the National Science Foundation (Award 2320162), and maintained by New Mexico Institute of Mining and Technology. 
+```
+
+
 ### For Publications
 
 Please include an acknowledgment similar to:
 
 ```{note}
-"This research was supported in part through computational resources provided by the New Mexico Tech High Performance Computing facility."
+"This research was supported in part through computational resources provided by the New Mexico Tech High Performance Computing facility (HPC@NMT). HPC@NMT  was funded by the National Science Foundation (Award 2320162), and maintained by New Mexico Institute of Mining and Technology."
 ```
 
-### For Presentations
 
-Consider adding a slide or mention in your acknowledgments:
-
-```{note}
-"Computations were performed using the New Mexico Tech HPC cluster."
-```
 
 ## Grant Proposals
 
-If you're writing a grant proposal that will use NMTHPC resources, please:
+If you're writing a grant proposal that will use NMTHPC resources, here is an example text for budget justification (or similar) type document:
 
-1. Contact HPC support at <hpc-support@nmt.edu> for a support letter
-2. Include information about NMTHPC resources in your facilities and equipment section
-3. Mention any specialized hardware (GPUs, high-memory nodes) relevant to your project
+```{note}
+We request $X dollars for X hours in computer services fees to support use of the New Mexico Tech high performance computing system. In detail, the support will include compilation and testing of software, running and optimization of models, and any related services. The rate for computer support services from the Information and Technology Center at NMT is currently $50/hr.
+```
 
 ### Facilities and Equipment Language
 
 You may adapt the following text for grant proposals:
 
 ```{note}
-New Mexico Tech provides high-performance computing resources through the NMT HPC cluster. The system includes {{nmthpc_total_cpu_nodes}} CPU compute nodes and {{nmthpc_total_gpu_nodes}} GPU nodes equipped with {{nmthpc_gpu_type}} GPUs. The cluster provides two high-performance filesystems ({{nmthpc_filesystem_1}} and {{nmthpc_filesystem_2}}) for data storage and uses the SLURM workload manager for job scheduling. The facility provides technical support for computational research across diverse scientific domains.
+New Mexico Tech provides high-performance computing resources through the NMT HPC cluster. The AMD-based system contains (1) 16 standard compute nodes each with 256 cores and 6 Gb of ram per core, (2) 3 high memory nodes each with 256 cores and 9 Gb of ram per core, and (3) 2 GPU nodes with 256 cores, Gb of ram per core, and 2 NVIDIA H100 GPUs.
 ```
+
+Please contact Dr. John Naliboff (john.naliboff@nmt.edu) for more information on how to leverage the HPC system in proposals and associated guidance on budgeting for HPC support services.
 
 ## Tracking Your Publications
 
@@ -55,22 +58,6 @@ We're interested in learning about publications that used NMTHPC resources. Plea
 - Patents or other research products
 
 Send publication information to <hpc-support@nmt.edu> with the subject line "NMTHPC Publication".
-
-## Examples of Acceptable Acknowledgments
-
-Here are various ways to acknowledge NMTHPC:
-
-**Minimal acknowledgment**:
-> "Computations were performed on the NMT HPC cluster."
-
-**Standard acknowledgment**:
-> "This work used computational resources provided by the New Mexico Tech High Performance Computing facility."
-
-**Detailed acknowledgment**:
-> "This research was supported in part through computational resources and services provided by the New Mexico Tech High Performance Computing facility. We specifically utilized the NVIDIA H100 GPU nodes for training our deep learning models."
-
-**With grant support**:
-> "This research was supported by NSF Grant XXX-XXXXXXX. Computational resources were provided by the New Mexico Tech HPC facility."
 
 ## Questions?
 

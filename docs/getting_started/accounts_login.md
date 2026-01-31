@@ -21,7 +21,7 @@ NMTHPC accounts are available to:
 4. Once approved, you'll receive your login credentials and connection instructions
 
 ```{note}
-Account requests are typically processed within 2-3 business days. Contact hpc-support@nmt.edu if you have questions about your request.
+We will be onboarding users to the HPC systems individually during the Spring 2026 semester. If you have been given access to the system, please contact Dr. Tahiry Rajaonarison (tahiry.rajaonarison@nmt.edu) for any questions regarding system access and usage. We will begin a more general onboarding process over the course of the summer 2026 semester.
 ```
 
 ## Connecting to NMTHPC
@@ -30,28 +30,21 @@ NMTHPC is accessed via SSH (Secure Shell). The login process differs slightly be
 
 ### Login Information
 
-- **Hostname**: `hpc.nmt.edu` (replace with actual hostname)
-- **Port**: 22 (standard SSH port)
-- **Username**: Your assigned NMT HPC username
-- **Password**: Your NMT HPC password
+- **Hostname**: `nmthpc.id.nmt.edu` 
+- **Username**: Your NMT 900 number.
+- **Password**: Your institutional password.
 
 ### From Linux or macOS
 
 Open a terminal and use the `ssh` command:
 
 ```bash
-$ ssh username@hpc.nmt.edu
+$ ssh username@nmthpc.id.nmt.edu
 ```
 
-Replace `username` with your actual username. You'll be prompted for your password.
+Replace `username` with your actual 900 number. You will be prompted for your password.
 
-**Example session**:
-```bash
-$ ssh jsmith@hpc.nmt.edu
-jsmith@hpc.nmt.edu's password:
-Last login: Mon Jan 15 09:23:45 2024 from 192.168.1.100
-[jsmith@login01 ~]$
-```
+
 
 ### From Windows
 
@@ -62,14 +55,14 @@ Windows users have several options:
 Modern Windows versions include OpenSSH:
 
 ```bash
-$ ssh username@hpc.nmt.edu
+$ ssh username@nmthpc.id.nmt.edu
 ```
 
 #### Option 2: PuTTY
 
 1. Download and install [PuTTY](https://www.putty.org/)
 2. Launch PuTTY
-3. Enter the hostname: `hpc.nmt.edu`
+3. Enter the hostname: `nmthpc.id.nmt.edu`
 4. Click "Open"
 5. Enter your username and password when prompted
 
@@ -78,7 +71,7 @@ $ ssh username@hpc.nmt.edu
 If you have WSL installed, use the same commands as Linux:
 
 ```bash
-$ ssh username@hpc.nmt.edu
+$ ssh username@nmthpc.id.nmt.edu
 ```
 
 ## SSH Keys (Recommended)
