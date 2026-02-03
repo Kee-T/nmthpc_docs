@@ -304,7 +304,7 @@ If you need software that's not currently installed:
 
 1. Check if containers are an option
 2. Try installing in your home directory
-3. Contact HPC support at <hpc-support@nmt.edu> with:
+3. Contact HPC support at <hpc@nmthpc.atlassian.net> with:
    - Software name and version
    - Website or download link
    - Brief description of your use case
@@ -394,4 +394,4 @@ Be cautious about loading modules automatically in `.bashrc`. This can cause iss
 
 ## Questions?
 
-For questions about available software or module usage, contact <hpc-support@nmt.edu>.
+For questions about available software or module usage, contact <hpc@nmthpc.atlassian.net>.

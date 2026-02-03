@@ -165,7 +165,7 @@ Globus provides fast, reliable data transfer between institutions.
 3. Set up transfers through web interface
 
 ```{note}
-Check with HPC support (<hpc-support@nmt.edu>) for Globus availability and endpoint name.
+Check with HPC support (<hpc@nmthpc.atlassian.net>) for Globus availability and endpoint name.
 ```
 
 ### Tar and Compress Before Transfer
@@ -348,4 +348,4 @@ For TB-scale data:
 
 ## Questions?
 
-For questions about data transfer or issues with file transfers, contact <hpc-support@nmt.edu>.
+For questions about data transfer or issues with file transfers, contact <hpc@nmthpc.atlassian.net>.

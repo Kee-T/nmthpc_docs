@@ -196,7 +196,7 @@ Contact HPC support at <hpc-support@nmt.edu> with:
 
 ### How do I contact HPC support?
 
-Email: <hpc-support@nmt.edu>
+Email: <pport@nmt.edu>
 
 Include in your request:
 

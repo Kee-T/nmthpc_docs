@@ -1,6 +1,6 @@
 # Software available
 
-Here we provide a summary of the software packages currently available on HPC@NMT.
+Here we provide a summary of the software packages currently available on NMTHPC.
 
 
 

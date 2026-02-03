@@ -3,7 +3,9 @@
 ## Things to do
 
 - \\TODO: fix support email.
+- \\TODO: test and tailor all software docs to NMTHPC
 - \\TODO: Ask Deep or some other VASP user to check and update the VASP documentation page.
+- \\TODO: remove the compute section and combine with "using nmthpc" 
 
 ## Research Computing User Tutorials
 

@@ -149,18 +149,6 @@ Upon your first login, you'll see:
 **Important**: Login nodes are for light tasks only (editing files, submitting jobs, compiling code). Do NOT run computationally intensive jobs on login nodes. Use SLURM to submit jobs to compute nodes.
 ```
 
-**Appropriate login node activities**:
-- Editing files
-- Compiling code
-- Submitting jobs with `sbatch` or `srun`
-- Transferring small files
-- Managing job submissions
-
-**Tasks requiring compute nodes**:
-- Running simulations or analyses
-- Training machine learning models
-- Any CPU or memory-intensive work
-- Long-running processes
 
 See [Running Interactive Jobs](../using_nmthpc/interactive_jobs.md) and [Running Batch Jobs](../using_nmthpc/batch_jobs.md) for how to use compute resources properly.
 
@@ -182,12 +170,12 @@ See [Running Interactive Jobs](../using_nmthpc/interactive_jobs.md) and [Running
 
 If you have many SSH keys, specify which one to use:
 ```bash
-$ ssh -i ~/.ssh/id_ed25519 username@hpc.nmt.edu
+$ ssh -i ~/.ssh/id_ed25519 username@nmthpc.id.nmt.edu
 ```
 
 ## Getting Help
 
 If you encounter issues logging in:
-- Contact HPC support at **hpc-support@nmt.edu**
+- Contact HPC support at **hpc@nmthpc.atlassian.net**
 - Include error messages and what you've tried
 - Specify your operating system and connection method

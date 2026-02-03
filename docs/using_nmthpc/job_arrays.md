@@ -615,4 +615,4 @@ echo "Task $SLURM_ARRAY_TASK_ID completed successfully"
 
 ## Questions?
 
-For questions about job arrays, contact <hpc-support@nmt.edu>.
+For questions about job arrays, contact <hpc@nmthpc.atlassian.net>.

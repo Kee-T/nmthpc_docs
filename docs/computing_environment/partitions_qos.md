@@ -478,7 +478,7 @@ $ sacctmgr show user $USER withassoc format=user,account,partition,qos,defaultqo
 
 ## Questions?
 
-For questions about partitions, QOS policies, or resource limits, contact <hpc-support@nmt.edu>.
+For questions about partitions, QOS policies, or resource limits, contact <hpc@nmthpc.atlassian.net>.
 
 For special resource requests or custom QOS, include:
 

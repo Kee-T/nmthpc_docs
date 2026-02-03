@@ -478,4 +478,4 @@ $ source ~/.bashrc
 
 ## Questions?
 
-For questions about monitoring jobs or resource usage, contact <hpc-support@nmt.edu>.
+For questions about monitoring jobs or resource usage, contact <hpc@nmthpc.atlassian.net>.

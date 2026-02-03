@@ -288,4 +288,4 @@ Hardware configurations may change as the system is upgraded. Always check curre
 
 ## Questions?
 
-For questions about node types, storage systems, or hardware specifications, contact HPC support at <hpc-support@nmt.edu>.
+For questions about node types, storage systems, or hardware specifications, contact HPC support at <hpc@nmthpc.atlassian.net>.
