@@ -46,7 +46,7 @@ You may adapt the following text for grant proposals:
 New Mexico Tech provides high-performance computing resources through the NMT HPC cluster. The AMD-based system contains (1) 16 standard compute nodes each with 256 cores and 6 Gb of ram per core, (2) 3 high memory nodes each with 256 cores and 9 Gb of ram per core, and (3) 2 GPU nodes with 256 cores, Gb of ram per core, and 2 NVIDIA H100 GPUs.
 ```
 
-Please contact Dr. John Naliboff (john.naliboff@nmt.edu) for more information on how to leverage the HPC system in proposals and associated guidance on budgeting for HPC support services.
+Please contact Dr. John Naliboff or write to <hpc@nmthpc.atlassian.net> for more information on how to leverage the HPC system in proposals and associated guidance on budgeting for HPC support services.
 
 ## Tracking Your Publications
 

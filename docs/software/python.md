@@ -205,10 +205,10 @@ Sometimes Conda environments can "break" if two packages in the environment requ
 
 ## Mamba Package Manager
 
-[Mamba](https://mamba.readthedocs.io/) is a fast, robust, and cross-platform package manager that aims to be a drop-in replacement for _Conda_. Utilizing Mamba can improve the speed and reliability of constructing an environment. To use Mamba on an Alpine or Blanca compute node, perform the following module load: 
+[Mamba](https://mamba.readthedocs.io/) is a fast, robust, and cross-platform package manager that aims to be a drop-in replacement for _Conda_. Utilizing Mamba can improve the speed and reliability of constructing an environment. 
 
 ```
-[johndoe@c3cpu-a7-u19-1 ~]$ module load miniforge
+module load miniforge
 ```
 
 The command above activates the base environment provided by Mamba. You will know that Mamba has been correctly loaded once you see `(base)` in front of your prompt. For example: 

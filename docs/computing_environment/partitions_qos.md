@@ -10,6 +10,7 @@ Partitions are groups of nodes with similar characteristics. Think of them as di
 
 ### Viewing Available Partitions
 
+
 ```bash
 $ sinfo
 ```
@@ -17,11 +18,10 @@ $ sinfo
 **Example output**:
 ```
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
-standard*    up 7-00:00:00     14   idle node[01-14]
-standard*    up 7-00:00:00      2  alloc node[15-16]
-gpu          up 2-00:00:00      1   idle gpu01
-gpu          up 2-00:00:00      1  alloc gpu02
-highmem      up 7-00:00:00      2   idle himem[01-02]
+defq*      up 2-00:00:00     21   idle node[01-14]
+cpu.std    up 2-00:00:00     16   alloc node[15-16]
+gpu        up 1-00:00:00      2   idle gpu01
+cpu.hm     up 2-00:00:00      3   idle himem[01-02]
 ```
 
 **Key columns**:
@@ -36,10 +36,10 @@ highmem      up 7-00:00:00      2   idle himem[01-02]
 ### Common Partitions
 
 ```{note}
-Partition names and configurations below are examples. Use `sinfo` to see actual partitions on NMTHPC.
+Use `sinfo` to see actual up-to-date partitions on NMTHPC.
 ```
 
-#### Standard Partition
+#### Standard (defq) Partition
 
 **Purpose**: General-purpose CPU computing
 
@@ -48,7 +48,7 @@ Partition names and configurations below are examples. Use `sinfo` to see actual
 - Default partition
 - CPU compute nodes
 - Standard memory allocation
-- Typical time limit: 7 days
+- Time limit: 2 days
 
 **When to use**:
 
@@ -58,7 +58,7 @@ Partition names and configurations below are examples. Use `sinfo` to see actual
 
 **Example job submission**:
 ```bash
-#SBATCH --partition=standard
+#SBATCH --partition=defq
 #SBATCH --ntasks=16
 #SBATCH --time=24:00:00
 ```
@@ -70,8 +70,6 @@ Partition names and configurations below are examples. Use `sinfo` to see actual
 **Characteristics**:
 
 - Nodes with NVIDIA H100 or NVIDIA H200 GPUs
-- Shorter time limits (to encourage turnover)
-- Limited number of nodes (high demand)
 
 
 
@@ -79,7 +77,7 @@ Partition names and configurations below are examples. Use `sinfo` to see actual
 ```bash
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:1
-#SBATCH --time=48:00:00
+#SBATCH --time=06:00:00
 ```
 
 See [Running Jobs on GPU Nodes](../using_nmthpc/gpu_jobs.md) for detailed guidance.
@@ -90,43 +88,13 @@ See [Running Jobs on GPU Nodes](../using_nmthpc/gpu_jobs.md) for detailed guidan
 
 **Characteristics**:
 
-- Nodes with large RAM (typically > 256 GB)
-- For applications that need more memory than standard nodes
-- May have fewer cores per GB than standard nodes
-
-**When to use**:
-
-- Genome assembly
-- Large-scale data analysis
-- Applications with high memory requirements
+- Nodes with large RAM, for applications that need more memory than standard nodes
 
 **Example job submission**:
 ```bash
-#SBATCH --partition=highmem
-#SBATCH --mem=500G
+#SBATCH --partition=cpu.hm 
+#SBATCH --mem=12G
 #SBATCH --time=24:00:00
-```
-
-#### Debug/Test Partition
-
-**Purpose**: Quick testing and development
-
-**Characteristics**:
-
-- Higher priority for fast job starts
-- Short time limits (typically 1-4 hours)
-- Limited resources
-
-**When to use**:
-
-- Testing job scripts
-- Debugging code
-- Short interactive sessions
-
-**Example job submission**:
-```bash
-#SBATCH --partition=debug
-#SBATCH --time=01:00:00
 ```
 
 ### Specifying Partitions
@@ -143,7 +111,7 @@ $ sbatch --partition=gpu myjob.sh
 
 **Interactive job**:
 ```bash
-$ srun --partition=debug --pty bash
+$ srun --partition=cpu.hm --pty bash
 ```
 
 **Omit for default partition**:
@@ -168,11 +136,9 @@ $ sacctmgr show qos
 $ sacctmgr show user $USER withassoc format=user,account,qos
 ```
 
-### Common QOS Levels
+### Available QOS Levels
 
-```{note}
-QOS names and policies below are examples. Contact HPC support for actual QOS configuration on NMTHPC.
-```
+
 
 #### Normal QOS
 
@@ -183,12 +149,12 @@ QOS names and policies below are examples. Contact HPC support for actual QOS co
 - Reasonable resource limits
 - Most jobs run under this QOS
 
-**Limits** (examples):
+**Limits** (to update once we have the final numbers):
 
 - Max jobs per user: 100
 - Max cores per user: 128
 - Max GPUs per user: 2
-- Max wall time: 7 days
+- Max wall time: 2 days
 
 #### High Priority QOS
 
@@ -216,7 +182,7 @@ QOS names and policies below are examples. Contact HPC support for actual QOS co
 
 **When to use**:
 
-- Simulations requiring > 7 days
+- Simulations requiring > 2 days (up to 7 days currently)
 - Long-running optimizations
 
 **Example**:
@@ -224,6 +190,35 @@ QOS names and policies below are examples. Contact HPC support for actual QOS co
 #SBATCH --qos=long
 #SBATCH --time=14-00:00:00
 ```
+
+#### h100 QOS
+
+QOS for GPU nodes (NVIDIA H100)
+
+#### h100-long QOS
+
+Some as long, but for GPU nodes.
+
+#### Testing QOS
+
+**Characteristics**:
+
+- Reserves a single node
+- Short jobs (max 1 hour walltime)
+- Use for time-sensitive code testing (limtied walltime and resources, but higher priority) 
+
+#### Compile QOS
+
+**Characteristics**:
+
+- Short jobs (max 4 hours walltime)
+- Use for demanding compilation jobs / building software
+
+#### Hmem QOS
+
+**Characteristics**:
+
+- Same as long, for high memory nodes. 
 
 ### Specifying QOS
 
@@ -254,7 +249,7 @@ $ sinfo -o "%P %.11l"  # Show partition time limits
 
 ### QOS Limits
 
-QOS policies may limit:
+QOS policies limit:
 
 - **Max jobs per user**: How many jobs you can have queued/running
 - **Max CPUs per user**: Total CPUs across all your jobs

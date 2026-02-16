@@ -4,7 +4,7 @@ This tutorial is adapted from the  CU Boulder Research Computing documentation, 
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
 
-The NVIDIA Performance Counters provide low-level metrics on GPU usage, enabling users to understand how efficiently their code uses the GPU. This is especially important for optimizing workloads on Alpine’s A100 GPU nodes, where GPU time is a valuable and shared resource.
+The NVIDIA Performance Counters provide low-level metrics on GPU usage, enabling users to understand how efficiently their code uses the GPU. This is especially important for optimizing workloads on NVIDIA H100 GPU nodes, where GPU time is a valuable and shared resource.
 
 The following tools are available for interacting with performance counters:
 
@@ -153,7 +153,7 @@ int main() {
 ```
 $ nvidia-smi
 ```
-Example output of `nvidia-smi` on the `aa100` partition using [matrixMultiply.cu](?tabset-cuda-code=cuda-matrix-multiply#tabset-ref-cuda-code){.external}:
+Example output of `nvidia-smi` on the `gpu` partition using [matrixMultiply.cu](?tabset-cuda-code=cuda-matrix-multiply#tabset-ref-cuda-code){.external}:
 
 ```
 +-----------------------------------------------------------------------------------------+
