@@ -16,7 +16,7 @@ Acknowledging NMTHPC in your publications:
 If this you use this system as part of a research project, please acknowledge acknowledge it  in journal articles or other media outlets as: 
 
 ```{note}
-We are grateful for the computation time on the High Performance Computing resource at New Mexico Tech. HPC@NMT  was funded by the National Science Foundation (Award 2320162), and maintained by New Mexico Institute of Mining and Technology. 
+We are grateful for the computation time on the High Performance Computing resource at New Mexico Tech. NMTHPC was funded by the National Science Foundation (Award 2320162), and maintained by New Mexico Institute of Mining and Technology. 
 ```
 
 
@@ -25,7 +25,7 @@ We are grateful for the computation time on the High Performance Computing resou
 Please include an acknowledgment similar to:
 
 ```{note}
-"This research was supported in part through computational resources provided by the New Mexico Tech High Performance Computing facility (HPC@NMT). HPC@NMT  was funded by the National Science Foundation (Award 2320162), and maintained by New Mexico Institute of Mining and Technology."
+"This research was supported in part through computational resources provided by the New Mexico Tech High Performance Computing facility (NMTHPC). NMTHPC  was funded by the National Science Foundation (Award 2320162), and maintained by New Mexico Institute of Mining and Technology."
 ```
 
 
@@ -57,11 +57,11 @@ We're interested in learning about publications that used NMTHPC resources. Plea
 - Theses and dissertations
 - Patents or other research products
 
-Send publication information to <hpc-support@nmt.edu> with the subject line "NMTHPC Publication".
+Send publication information to <hpc@nmthpc.atlassian.net> with the subject line "NMTHPC Publication".
 
 ## Questions?
 
-If you have questions about how to acknowledge NMTHPC or need a support letter for a grant proposal, please contact <hpc-support@nmt.edu>.
+If you have questions about how to acknowledge NMTHPC or need a support letter for a grant proposal, please contact <hpc@nmthpc.atlassian.net>.
 
 ## Thank You
 

@@ -1,4 +1,4 @@
-name: rc-docs
+name: read_the_docs
 channels:
   - conda-forge
 dependencies:

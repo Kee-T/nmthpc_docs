@@ -171,4 +171,4 @@ $ matlab -nodisplay -nosplash -r "process_data('input.csv', 'output.csv'); exit"
 
 ## Questions?
 
-Contact <hpc-support@nmt.edu> for MATLAB support.
+Contact <hpc@nmthpc.atlassian.net> for MATLAB support.

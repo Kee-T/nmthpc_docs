@@ -10,7 +10,7 @@ See our [Accounts and System Login](accounts_login.md) page for detailed instruc
 
 ### I forgot my password. How do I reset it?
 
-Contact the HPC support team at <hpc-support@nmt.edu> to request a password reset. Include your username in the request.
+Contact the HPC support team at <hpc@nmthpc.atlassian.net> to request a password reset. Include your username in the request.
 
 ### Can I access NMTHPC from off campus?
 
@@ -155,7 +155,7 @@ See specific software guides in the [Software and Examples](../software/anaconda
 
 ### I need software that's not installed. What should I do?
 
-Contact HPC support at <hpc-support@nmt.edu> with:
+Contact HPC support at <hpc@nmthpc.atlassian.net> with:
 
 - Software name and version
 - Why you need it

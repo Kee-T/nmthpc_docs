@@ -2,14 +2,7 @@
 
 This page explains the partition and Quality of Service (QOS) systems used on NMTHPC to manage access to computing resources.
 
-## Overview
 
-NMTHPC uses **partitions** and **QOS** (Quality of Service) policies to:
-
-- Organize nodes by hardware type
-- Prioritize different types of jobs
-- Ensure fair resource sharing
-- Manage job scheduling
 
 ## Partitions
 
@@ -72,19 +65,15 @@ Partition names and configurations below are examples. Use `sinfo` to see actual
 
 #### GPU Partition
 
-**Purpose**: GPU-accelerated computing
+**Purpose**: GPU computing, AI/ML model training
 
 **Characteristics**:
 
-- Nodes with {{nmthpc_gpu_type}} GPUs
+- Nodes with NVIDIA H100 or NVIDIA H200 GPUs
 - Shorter time limits (to encourage turnover)
 - Limited number of nodes (high demand)
 
-**When to use**:
 
-- Deep learning and AI/ML
-- GPU-accelerated scientific computing
-- CUDA applications
 
 **Example job submission**:
 ```bash

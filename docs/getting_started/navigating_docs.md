@@ -64,7 +64,7 @@ Detailed guides for specific applications:
 If you can't find what you're looking for in the documentation:
 
 1. Check the [FAQ](faq.md) for common questions
-2. Contact our support team at <hpc-support@nmt.edu>
+2. Contact our support team at <hpc@nmthpc.atlassian.net>
 3. Include relevant details: job IDs, error messages, and what you've already tried
 
 ## Contributing to Documentation

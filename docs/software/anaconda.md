@@ -453,4 +453,4 @@ $ conda env export > ml_environment.yml
 
 ## Questions?
 
-For questions about Anaconda on NMTHPC, contact <hpc-support@nmt.edu>.
+For questions about Anaconda on NMTHPC, contact <hpc@nmthpc.atlassian.net>.

@@ -628,4 +628,4 @@ echo "Job completed at $(date)"
 
 ## Questions?
 
-For questions about GPU computing on NMTHPC, contact <hpc-support@nmt.edu>.
+For questions about GPU computing on NMTHPC, contact <hpc@nmthpc.atlassian.net>.

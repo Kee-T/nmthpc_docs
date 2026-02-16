@@ -420,4 +420,4 @@ $ exit
 
 ## Questions?
 
-For questions about interactive jobs, contact <hpc-support@nmt.edu>.
+For questions about interactive jobs, contact <hpc@nmthpc.atlassian.net>.

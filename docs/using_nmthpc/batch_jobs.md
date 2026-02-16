@@ -648,4 +648,4 @@ $ mkdir -p logs
 
 ## Questions?
 
-For questions about batch jobs or SLURM, contact <hpc-support@nmt.edu>.
+For questions about batch jobs or SLURM, contact <hpc@nmthpc.atlassian.net>.

@@ -8,7 +8,7 @@ This guide covers using VASP (Vienna Ab initio Simulation Package) for density f
 VASP is commercial software requiring a valid license. You must provide proof of license before accessing VASP on NMTHPC.
 ```
 
-Contact <hpc-support@nmt.edu> with your VASP license information.
+Contact <hpc@nmthpc.atlassian.net> with your VASP license information.
 
 ## Loading VASP
 
@@ -130,4 +130,4 @@ $ tail OSZICAR
 
 ## Questions?
 
-Contact <hpc-support@nmt.edu> for VASP support.
+Contact <hpc@nmthpc.atlassian.net> for VASP support.
