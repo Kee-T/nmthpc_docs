@@ -9,7 +9,7 @@ The NMT HPC cluster consists of:
 - **{{nmthpc_total_cpu_nodes}}** CPU compute nodes for general-purpose computing
 - **{{nmthpc_total_gpu_nodes}}** GPU nodes with {{nmthpc_gpu_type}} GPUs for accelerated workloads
 - Multiple login nodes for user access
-- Two high-performance filesystems: **{{nmthpc_filesystem_1}}** and **{{nmthpc_filesystem_2}}**
+- Two high-performance filesystems
 
 ## Node Types
 
@@ -50,18 +50,11 @@ CPU compute nodes are designed for general-purpose parallel computing.
 
 **Specifications** (typical):
 
-- Processor: Modern multi-core CPUs
-- Cores per node: Varies (check specific partitions)
+- Processor: Multi-core CPUs
+- Cores per node: 128 
 - Memory: Varies by node type
-- Network: High-speed interconnect
 
-**Best for**:
 
-- Parallel computing with MPI
-- Multi-threaded applications
-- Large-scale simulations
-- Data processing pipelines
-- Scientific computing workloads
 
 **Accessing CPU nodes**:
 
@@ -83,18 +76,9 @@ NMTHPC features {{nmthpc_total_gpu_nodes}} GPU nodes equipped with **{{nmthpc_gp
 
 **GPU Specifications**:
 
-- GPU Model: NVIDIA H100
-- GPUs per node: Check with HPC support for specific configuration
-- GPU Memory: High-bandwidth HBM memory
-- CUDA Capability: Latest generation
+- GPU Model: NVIDIA H100 and H200
 
-**Best for**:
 
-- Deep learning and AI/ML training
-- GPU-accelerated scientific computing
-- Molecular dynamics simulations
-- Image and video processing
-- Computational fluid dynamics
 
 **Requesting GPU resources**:
 
@@ -122,7 +106,7 @@ NMTHPC provides multiple storage systems optimized for different use cases.
 **Characteristics**:
 
 - Personal storage space
-- Backed up regularly (verify backup policy with HPC support)
+- Backed up regularly (verify backup with HPC support)
 - Limited quota
 - Accessible from all nodes
 

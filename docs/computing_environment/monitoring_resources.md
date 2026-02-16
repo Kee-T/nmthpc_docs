@@ -109,54 +109,7 @@ $ sacct --starttime=2024-01-01 --endtime=2024-01-31 -u $USER
 - `TotalCPU`: Total CPU time used
 - `State`: Final state of the job
 
-## Real-Time Job Monitoring
 
-### Monitoring Running Jobs
-
-**SSH to the compute node** (while job is running):
-
-First, find which node:
-```bash
-$ squeue -u $USER
-```
-
-Then connect:
-```bash
-$ ssh nodeXXX
-```
-
-```{warning}
-Only SSH to nodes where you have an active job. Do not access nodes where you don't have a running job.
-```
-
-### Checking Resource Usage
-
-**Once on the compute node**:
-
-**CPU and memory usage**:
-```bash
-$ top
-```
-
-or for a better interface:
-```bash
-$ htop
-```
-
-**Your processes only**:
-```bash
-$ top -u $USER
-```
-
-**Memory usage**:
-```bash
-$ free -h
-```
-
-**Disk I/O**:
-```bash
-$ iostat -x 5
-```
 
 ### GPU Monitoring
 

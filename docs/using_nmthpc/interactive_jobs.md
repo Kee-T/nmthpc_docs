@@ -146,12 +146,12 @@ See [MATLAB](../software/matlab.md) for more information.
 
 **When connecting to NMTHPC**:
 ```bash
-$ ssh -X username@hpc.nmt.edu
+$ ssh -X username@nmthpc.id.nmt.edu
 ```
 
 or
 ```bash
-$ ssh -Y username@hpc.nmt.edu  # Trusted X11 forwarding
+$ ssh -Y username@nmthpc.id.nmt.edu  # Trusted X11 forwarding
 ```
 
 **Start interactive job with X11**:
@@ -219,7 +219,7 @@ Files on shared filesystems (home, project directories) are accessible on comput
 
 Open another terminal and use scp/rsync to transfer to your home directory:
 ```bash
-$ scp file.dat username@hpc.nmt.edu:~/
+$ scp file.dat username@nmthpc.id.nmt.edu:~/
 ```
 
 ### Saving Your Interactive Work

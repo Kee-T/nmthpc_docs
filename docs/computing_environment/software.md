@@ -122,26 +122,12 @@ See [Using MPI with Fortran](../software/mpi_fortran.md) for MPI programming exa
 $ module load cuda/12.1
 ```
 
-**cuDNN** (Deep Learning library):
-```bash
-$ module load cudnn/8.9
-```
-
-**TensorRT** (Inference optimization):
-```bash
-$ module load tensorrt/8.6
-```
 
 ### Mathematical and Scientific Libraries
 
 **BLAS/LAPACK** (Linear algebra):
 ```bash
 $ module load openblas/0.3.21
-```
-
-**FFTW** (Fast Fourier Transform):
-```bash
-$ module load fftw/3.3.10
 ```
 
 **HDF5** (Hierarchical data format):
@@ -153,19 +139,6 @@ $ module load hdf5/1.14.0
 ```bash
 $ module load netcdf/4.9.0
 ```
-
-### Machine Learning Frameworks
-
-**TensorFlow**:
-```bash
-$ module load tensorflow/2.13-gpu
-```
-
-**PyTorch**:
-```bash
-$ module load pytorch/2.0-gpu
-```
-
 
 ### Scientific Applications
 
@@ -183,76 +156,22 @@ $ module load vasp/6.4.0
 
 See [VASP](../software/vasp.md) for computational chemistry examples.
 
-**GROMACS** (Molecular dynamics):
-```bash
-$ module load gromacs/2023.1
-```
-
-**LAMMPS** (Molecular dynamics):
-```bash
-$ module load lammps/2023
-```
-
-**QuantumESPRESSO**:
-```bash
-$ module load quantum-espresso/7.2
-```
-
-### Data Analysis and Visualization
-
-**Paraview**:
-```bash
-$ module load paraview/5.11
-```
-
-**Visit**:
-```bash
-$ module load visit/3.3.3
-```
-
-**ImageMagick**:
-```bash
-$ module load imagemagick/7.1
-```
-
-### Bioinformatics
-
-**BLAST**:
-```bash
-$ module load blast/2.14.0
-```
-
-**SAMtools**:
-```bash
-$ module load samtools/1.17
-```
-
-**Bowtie2**:
-```bash
-$ module load bowtie2/2.5.1
-```
 
 ## Python Package Management
 
-### Using pip with User Installation
 
-Install packages in your home directory:
-```bash
-$ module load python/3.11
-$ pip install --user packagename
-```
 
 ### Using Anaconda/Miniconda
 
 Anaconda is recommended for managing Python environments:
 ```bash
-$ module load anaconda3
+$ module load anaconda
 $ conda create -n myenv python=3.11
 $ conda activate myenv
 $ conda install numpy scipy matplotlib
 ```
 
-See [Anaconda](../software/anaconda.md) for comprehensive instructions.
+See [Anaconda](../software/anaconda.md) for instructions.
 
 ## R Package Installation
 
@@ -263,7 +182,7 @@ $ R
 > install.packages("ggplot2", repos="https://cloud.r-project.org")
 ```
 
-See [R](../software/r.md) for more details.
+See [R](../software/r.md) for more details. Note: we recommend installing R using conda environments.
 
 ## Containers (Singularity/Apptainer)
 
