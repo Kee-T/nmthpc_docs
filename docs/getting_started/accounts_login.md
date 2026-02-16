@@ -21,7 +21,7 @@ NMTHPC accounts are available to:
 4. Once approved, you'll receive your login credentials and connection instructions
 
 ```{note}
-We will be onboarding users to the HPC systems individually during the Spring 2026 semester. If you have been given access to the system, please contact Dr. Tahiry Rajaonarison (tahiry.rajaonarison@nmt.edu) for any questions regarding system access and usage. We will begin a more general onboarding process over the course of the summer 2026 semester.
+We will be onboarding users to the HPC systems individually during the Spring 2026 semester. If you have been given access to the system, please contact NMTHPC support (`hpc@nmthpc.atlassian.net`) for any questions regarding system access and usage. We will begin a more general onboarding process over the course of the summer 2026 semester.
 ```
 
 ## Connecting to NMTHPC
@@ -117,13 +117,8 @@ After setting up SSH keys, you can log in without entering your password each ti
 
 ## First Login
 
-### What to Expect
 
-Upon your first login, you'll see:
-- A welcome message with system information
-- Your home directory path
-- Available disk space
-- System announcements and maintenance schedules
+Upon your first login, you'll be in the home directory and you will see a welcome message with recent announcements or system information. 
 
 ### Initial Setup
 

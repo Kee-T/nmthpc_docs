@@ -196,7 +196,7 @@ Contact HPC support at <hpc@nmthpc.atlassian.net> with:
 
 ### How do I contact HPC support?
 
-Email: <pport@nmt.edu>
+Email: <hpc@nmthpc.atlassian.net>
 
 Include in your request:
 
