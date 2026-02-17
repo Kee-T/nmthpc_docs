@@ -4,12 +4,11 @@ This tutorial is adapted from the  CU Boulder Research Computing documentation, 
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
 
-To support diverse _Python_ and _R_ workflows, Research Computing users can utilize [Anaconda](http://anaconda.com). Anaconda 
+To support diverse _Python_ and _R_ workflows, users can utilize [Anaconda](http://anaconda.com). Anaconda 
 provides the _Conda_ package manager, which allows for easy installation of software and associated 
 packages. The _Conda_ package manager provides support for _Python_, _R_, and many other application stacks. 
-CURC also supports [Mamba](https://mamba.readthedocs.io/), an alternative package manager that allows parallel downloading of repository data and package files using multi-threading.
+[Mamba](https://mamba.readthedocs.io/) is an alternative package manager that allows parallel downloading of repository data and package files using multi-threading.
 
-The following documentation describes how to activate the CURC Anaconda distribution and our default environments, as well as how to create and activate your own custom Anaconda environments. For more information on utilizing [Mamba](https://mamba.readthedocs.io/) (an alternative package manager) please see the section [Mamba Package Manager](#mamba-package-manager) below. Additional documentation on [CURC OpenOnDemand](../open_ondemand/jupyter_session.md) is available for users desiring to interact with their custom environments via [Jupyter notebooks](https://jupyter.org). 
 
 ## Configuring Conda and Mamba with `.condarc`
 
@@ -38,51 +37,7 @@ After making changes, save and exit the file. Any modifications made and saved w
 
 ## Using Conda:
 
-Now that you have activated the base Conda environment, you can use Conda for Python and R! There are two ways forward, depending on your needs. You can:
-
-__1. Use one of CURC's pre-installed environments.__
-* Pros: You can begin using one of these immediately, and they contain mainy of the most widely used python and R packages. 
-* Cons: These are root-owned environments, so you **can not** add additional packages. 
-
-or
-
-__2. Create your own custom environment(s).__
-* Pros: You own these, so you can add packages as needed, control package versions, etc.
-* Cons: There really aren't any cons, other than the time needed to create a custom environment (usually 5-30 minutes depending on the number of packages you install).     
-
-Both options are discussed below.
-
-#### Using one of CURC's pre-installed environment:
-
-To use the CURC environment with OpenMP, run the following command with 
-Anaconda initialized:
-
-```
-(base) [johndoe@c3cpu-a7-u19-1 ~]$ conda activate 
-/curc/sw/anaconda3/2022.10/envs/pyomp_2022 
-```
-
-You will know that you have properly activated the environment because you 
-should see `(pyomp_2022)` replace the `(base)` in front of your prompt.  
-
-To see the python packages available in the environment, you can type `conda list`.   
-
-Similarly, to use the CURC R distribution (R v3.6.0), run the following 
-command with Anaconda initialized:
-
-```
-(base) [johndoe@c3cpu-a7-u19-1 ~]$ conda activate 
-/curc/sw/anaconda3/2019.03/envs/rstudio
-```
-
-You will know that you have properly activated the environment because you should see `(rstudio)` in front of your prompt. To see the R packages available in the environment, you can type `conda list`. Now, you can use R as you normally would. 
-
-
-#### Create your own custom environment:
-
-```{tip}
-In the examples below the environment is created in `/projects/$USER/software/anaconda/envs`, which is specified under `envs_dirs` in your `.condarc file`. Environments can be installed in any user-writable location the user chooses; just add the path to `~/.condarc`.
-```
+To create your own computing environments, you can do the following:
 
 __1. Initialize Anaconda if you haven't already done so:__
  

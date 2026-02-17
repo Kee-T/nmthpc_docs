@@ -200,15 +200,6 @@ saveRDS(model, "model.rds")
 loaded_model <- readRDS("model.rds")
 ```
 
-## RStudio Server
 
-Check with HPC support about RStudio Server availability for browser-based R development.
-
-## Best Practices
-
-1. **Save workspace**: `save.image("workspace.RData")`
-2. **Load workspace**: `load("workspace.RData")`
-3. **Set random seed**: `set.seed(123)` for reproducibility
-4. **Use renv** for package management: `install.packages("renv")`
 
 
