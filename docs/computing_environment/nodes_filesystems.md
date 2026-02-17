@@ -9,13 +9,14 @@ The NMT HPC cluster consists of:
 - **{{nmthpc_total_cpu_nodes}}** CPU compute nodes for general-purpose computing
 - **{{nmthpc_total_gpu_nodes}}** GPU nodes with {{nmthpc_gpu_type}} GPUs for accelerated workloads
 - Multiple login nodes for user access
-- Two high-performance filesystems
+- Two high-performance filesystems: **{{nmthpc_filesystem_1}}** and **{{nmthpc_filesystem_1}}**
 
 ## Node Types
 
 ### Login Nodes
 
 Login nodes are your entry point to the cluster. When you SSH to NMTHPC, you connect to a login node.
+Your home directory will be in the **{{nmthpc_filesystem_1}}** filesystem, which is backed up (ZFS1 is backed up in a parallel filesystem ZFS2). 
 
 **Purpose**:
 
@@ -31,7 +32,7 @@ Login nodes are your entry point to the cluster. When you SSH to NMTHPC, you con
 
 **Appropriate uses**:
 
-- Editing scripts with vim, nano, or emacs
+- Editing scripts with vim or nano
 - Compiling code
 - Submitting jobs with `sbatch` or `srun`
 - Checking job status with `squeue`
@@ -51,7 +52,7 @@ CPU compute nodes are designed for general-purpose parallel computing.
 **Specifications** (typical):
 
 - Processor: Multi-core CPUs
-- Cores per node: 128 
+- Cores per node: 256 
 - Memory: Varies by node type
 
 
@@ -106,7 +107,7 @@ NMTHPC provides multiple storage systems optimized for different use cases.
 **Characteristics**:
 
 - Personal storage space
-- Backed up (verify backup with HPC support)
+- Backed up (ZFS1 filesystem backed up in filesystem ZFS2)
 - Limited quota
 - Accessible from all nodes
 
@@ -126,9 +127,8 @@ $ quota -s
 Keep your home directory organized and clean. Regularly delete unnecessary files to stay within quota limits.
 ```
 
-### {{nmthpc_filesystem_1}} Filesystem
+### {{nmthpc_filesystem_2}} Filesystem
 
-**Path**: (Contact HPC support for mount point)
 
 **Characteristics**:
 
@@ -144,43 +144,25 @@ Keep your home directory organized and clean. Regularly delete unnecessary files
 - Simulation input and output files
 - High I/O workloads
 
-### {{nmthpc_filesystem_2}} Filesystem
 
-**Path**: (Contact HPC support for mount point)
 
-**Characteristics**:
+This is a scratch space for temporary files needed during job execution.
 
-- Additional storage capacity
-- Suitable for longer-term project storage
-- Shared across compute nodes
-
-**Best for**:
-
-- Long-term project storage
-- Large datasets
-- Archival of completed work
-- Collaborative project data
-
-### Local Scratch Space
-
-Most compute nodes have local scratch space for temporary files during job execution.
-
-**Path**: Typically `/tmp` or `/scratch` (check with `$TMPDIR` in your job)
+**Path**: Under `/data` 
 
 **Characteristics**:
 
-- Fast local storage
-- Only accessible on the specific node
-- Automatically cleaned up after job completion
+- Not backed up
+- Periodically cleaned up 
 
 **Best for**:
 
-- Temporary files during computation
+- Temporary data or model output
 - Intermediate results
 - Reducing I/O to shared filesystems
 
 ```{warning}
-Data in local scratch is automatically deleted when your job ends. Always copy important results to a permanent filesystem before your job completes.
+Data in local scratch `\data` is periodically deleted (e.g., every 90 days) and not backed up. Always copy important results to a permanent filesystem or to other machines.
 ```
 
 ## Storage Best Practices
@@ -190,10 +172,10 @@ Data in local scratch is automatically deleted when your job ends. Always copy i
 | Use Case | Recommended Location |
 |----------|---------------------|
 | Scripts and code | Home directory |
-| Small datasets (< 10 GB) | Home directory |
-| Active large datasets | {{nmthpc_filesystem_1}} |
-| Long-term project storage | {{nmthpc_filesystem_2}} |
-| Temporary files during jobs | Local scratch |
+| Small datasets  | Home directory |
+| Long-term project storage | {{nmthpc_filesystem_1}} |
+| Active large datasets | scratch {{nmthpc_filesystem_2}} |
+| Temporary files during jobs | scratch {{nmthpc_filesystem_2}} |
 
 ### Managing Disk Quotas
 

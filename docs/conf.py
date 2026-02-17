@@ -12,8 +12,8 @@ myst_substitutions = {
    'nmthpc_total_cpu_nodes': '16',
    'nmthpc_total_gpu_nodes': '2',
    'nmthpc_gpu_type': 'NVIDIA H100',
-   'nmthpc_filesystem_1': 'zfs',
-   'nmthpc_filesystem_2': 'beegfs',
+   'nmthpc_filesystem_1': 'ZFS',
+   'nmthpc_filesystem_2': 'BeeGFS',
 }
 
 source_suffix = {
