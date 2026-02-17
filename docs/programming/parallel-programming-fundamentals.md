@@ -80,8 +80,6 @@ processors sharing a set of common memory is called a node.
 
 (Image courtesy of [LLNL](https://hpc.llnl.gov/documentation/tutorials/introduction-parallel-computing-tutorial##MemoryArch))
 
-Alpine utilizes a hybrid distributed/shared model. For more information about Alpine's hardware, see our [hardware](../clusters/alpine/alpine-hardware.md) page.
-
 ## Tools for Parallel Programming
 
 Two common solutions for creating parallel code are OpenMP and
@@ -110,5 +108,5 @@ applications (i.e, distributed memory models). MPI is, however, often
 considered less accessable and more difficult to learn. Regardless, learning the library
 provides a user with the ability to maximize processing ability. MPI
 is a library standard, meaning there are several libraries based on
-MPI that you can use to develop parallel code. OpenMPI and Intel MPI are solutions available on most CURC systems.
+MPI that you can use to develop parallel code. 
 

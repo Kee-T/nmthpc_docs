@@ -21,7 +21,7 @@ NMTHPC accounts are available to:
 4. Once approved, you'll receive your login credentials and connection instructions
 
 ```{note}
-We will be onboarding users to the HPC systems individually during the Spring 2026 semester. If you have been given access to the system, please contact NMTHPC support (`hpc@nmthpc.atlassian.net`) for any questions regarding system access and usage. We will begin a more general onboarding process over the course of the summer 2026 semester.
+We will be onboarding users to the HPC systems individually during the Spring 2026 semester. If you have been given access to the system, please contact NMTHPC support (<hpc@nmthpc.atlassian.net>) for any questions regarding system access and usage. We will begin a more general onboarding process over the course of the summer 2026 semester.
 ```
 
 ## Connecting to NMTHPC
@@ -96,7 +96,7 @@ $ ssh-keygen -t ed25519 -C "your_email@nmt.edu"
 
 **Method 1: Using ssh-copy-id (Linux/macOS/WSL)**:
 ```bash
-$ ssh-copy-id username@hpc.nmt.edu
+$ ssh-copy-id username@nmthpc.id.nmt.edu
 ```
 
 **Method 2: Manual copy**:

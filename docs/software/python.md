@@ -34,35 +34,9 @@ Although we will automatically create this file for you when you load the associ
 
 After making changes, save and exit the file. Any modifications made and saved will be permanent unless you modify `.condarc` later.
 
-```{important}
-CSU and XSEDE/ACCESS users may need to use a custom `$USER` 
-variable because the `@` symbol in the usernames can occasionally be misinterpreted by environments that employ PERL. Directions to set up a custom user variable can be found under our [CSU and XSEDE username documentation](../additional-resources/csu-xsede-usernames.md).
-```
 
-## Using the CURC Anaconda environment
-Follow these steps from a Research Computing terminal session on an Alpine 
-`acompile` node or within a Alpine/Blanca batch or interactive job.
 
-### Activate the CURC Anaconda environment:
-
-Run the following command to load the base Anaconda software:  
-
-```
-[johndoe@c3cpu-a7-u19-1 ~]$ module load anaconda
-```
-
-```{note}
-The command above activates the base environment for python3, which as of 2020 is the only supported python standard. For users requiring legacy python2, you can still use Conda to create a custom environment with the python2.X version of your choice (we provide an example of how to do this below)
-```
-
-You will know that you have properly activated the environment because you 
-should see `(base)` in front of your prompt. For example: 
-
-```
-(base) [johndoe@c3cpu-a7-u19-1 ~]$
-```
-
-### Using Conda:
+## Using Conda:
 
 Now that you have activated the base Conda environment, you can use Conda for Python and R! There are two ways forward, depending on your needs. You can:
 
@@ -102,13 +76,6 @@ command with Anaconda initialized:
 ```
 
 You will know that you have properly activated the environment because you should see `(rstudio)` in front of your prompt. To see the R packages available in the environment, you can type `conda list`. Now, you can use R as you normally would. 
-
-Because interactive development is more easily done locally, most CURC R 
-users exclusively run R code within batch jobs. Should you need to use 
-rstudio on top of R for interactive development on Alpine, you can login 
-to 
-our system with X11-forwarding (`ssh -X`) and initiate an rstudio session from within an interactive job.  
-
 
 
 #### Create your own custom environment:

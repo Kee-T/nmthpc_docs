@@ -24,7 +24,7 @@ $ matlab -nodisplay -nosplash
 
 **Connect with X11 forwarding**:
 ```bash
-$ ssh -X username@hpc.nmt.edu
+$ ssh -X username@nmthpc.id.nmt.edu
 $ srun --x11 --mem=16G --time=02:00:00 --pty bash
 $ module load matlab/R2023a
 $ matlab

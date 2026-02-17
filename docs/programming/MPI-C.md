@@ -18,14 +18,7 @@ __Helpful MPI Tutorial:__
 
 ## Setup and “Hello, World”
 
-Begin by logging into the cluster and logging in to a compile
-node. This can be done by loading the Alpine scheduler and using the command:
-
-```bash
-acompile
-```
-
-Next we must load MPI into our environment. Begin by loading in your
+We must first load MPI into our environment. Begin by loading in your
 choice of C++ compiler and its corresponding MPI library. Use the
 following commands if using the GNU C++ compiler:
 
@@ -226,8 +219,8 @@ something like this:
 #SBATCH -N 1
 #SBATCH --ntasks 4
 #SBATCH --job-name parallel_hello
-#SBATCH --partition atesting
-#SBATCH --qos testing
+#SBATCH --partition cpu.std
+#SBATCH --qos normal
 #SBATCH --constraint ib
 #SBATCH --time 00:01:00
 #SBATCH --output parallel_hello_world.out
@@ -250,8 +243,8 @@ mpirun -np 4 ./hello_world_mpi.exe
 #SBATCH -N 1
 #SBATCH --ntasks 4
 #SBATCH --job-name parallel_hello
-#SBATCH --partition atesting
-#SBATCH --qos testing
+#SBATCH --partition cpu.std
+#SBATCH --qos normal
 #SBATCH --constraint ib
 #SBATCH --time 00:01:00
 #SBATCH --output parallel_hello_world.out
@@ -268,10 +261,8 @@ mpirun -np 4 ./hello_world_mpi.exe
 `````
 
 ```{note}
-On Alpine, there are at most 64 cores
-per node. For applications that require more than 64 processes, you
-will need to request multiple nodes in your job. Our
-output file should look something like this:
+
+The output file should look something like this:
 
 ```bash
 Hello World from process 3 of 4

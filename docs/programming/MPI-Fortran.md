@@ -18,14 +18,7 @@ __Helpful MPI tutorial:__
 
 ## Setup and “Hello World”
 
-Begin by logging into the cluster and logging in to a
-compile node. This can be done by loading the Alpine module and using the command:
-
-```shell
-acompile
-```
-
-Next we must load MPI into our environment. Begin by loading in the
+First we must load MPI into our environment. Begin by loading in the
 Fortran compiler and OpenMPI. Use the following commands if using the
 GNU Fortran compiler:
 
@@ -190,7 +183,7 @@ mpiifort hello_world_mpi.f90 -o hello_world_mpi.exe
 ````
 `````
 
-This will produce an executable we can pass to our prefered HPC system (e.g. Alpine or Blanca) as a job.  In
+This will produce an executable we can pass to our HPC system as a job.  In
 order to execute MPI compiled code, a special command must be used:
 
 ```shell
@@ -216,7 +209,7 @@ job script should look something like this:
 #SBATCH -N 1
 #SBATCH --ntasks 4
 #SBATCH --job-name parallel_hello
-#SBATCH --partition atesting
+#SBATCH --partition cpu.std
 #SBATCH --qos testing
 #SBATCH --constraint ib
 #SBATCH --time 00:01:00
@@ -240,7 +233,7 @@ mpirun -np 4 ./hello_world_mpi.exe
 #SBATCH -N 1
 #SBATCH --ntasks 4
 #SBATCH --job-name parallel_hello
-#SBATCH --partition atesting
+#SBATCH --partition cpu.std
 #SBATCH --qos testing
 #SBATCH --constraint ib
 #SBATCH --time 00:01:00
@@ -254,13 +247,7 @@ module load impi
 mpirun -np 4 ./hello_world_mpi.exe
 ```
 
-````
-`````
 
-```{note}
-On Alpine, there are at most 64 cores per
-node. For applications that require more than 64 processes, you will
-need to request multiple nodes in your job (i.e. modify the value for `-N`).
 
 Our output file should look something like this (note the order of
 ranks isn’t necessarily sequential):
