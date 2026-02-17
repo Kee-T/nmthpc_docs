@@ -95,7 +95,7 @@ Lines starting with `#SBATCH` are SLURM directives:
 #SBATCH --nodes=1                   # Number of nodes
 #SBATCH --mem=16G                   # Memory per node
 #SBATCH --time=04:00:00             # Time limit (HH:MM:SS)
-#SBATCH --partition=standard        # Partition name
+#SBATCH --partition=cpu.std         # Partition name
 #SBATCH --mail-type=END,FAIL        # Email notifications
 #SBATCH --mail-user=you@nmt.edu     # Your email
 ```
@@ -178,7 +178,7 @@ Always specify a realistic time limit. Jobs are killed when time expires. Add ~2
 ### Partition Selection
 
 ```bash
-#SBATCH --partition=standard  # Use standard partition
+#SBATCH --partition=cpu.std   # Use standard partition
 #SBATCH --partition=gpu       # Use GPU partition
 ```
 
@@ -599,7 +599,7 @@ For MPI and parallel programming:
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=4G
 #SBATCH --time=01:00:00
-#SBATCH --partition=standard
+#SBATCH --partition=std.cpu
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=you@nmt.edu
 

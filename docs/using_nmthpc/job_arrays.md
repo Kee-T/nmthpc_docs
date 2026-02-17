@@ -386,70 +386,6 @@ for i in $(seq 1 $NUM_TASKS); do
 done
 ```
 
-## Best Practices
-
-### Array Design
-
-**1. Task independence**: Each task should be independent
-
-**Good**:
-```bash
-# Each task processes different file
-INPUT=$(printf "data_%03d.txt" $SLURM_ARRAY_TASK_ID)
-```
-
-**Bad**:
-```bash
-# Tasks depend on each other's output - don't use arrays
-```
-
-**2. Appropriate granularity**:
-
-- Too small: Overhead dominates (< 1 minute tasks)
-- Too large: Inefficient use of resources (> 24 hour tasks)
-- Sweet spot: 15 minutes to 8 hours per task
-
-**3. Limit concurrent tasks**:
-```bash
-#SBATCH --array=1-10000%100  # Max 100 concurrent
-```
-
-### Resource Requests
-
-**1. All tasks get same resources**:
-
-If tasks need different resources, use separate array jobs:
-```bash
-# Small memory tasks
-#SBATCH --array=1-50
-#SBATCH --mem=4G
-
-# Large memory tasks in different script
-#SBATCH --array=51-100
-#SBATCH --mem=16G
-```
-
-**2. Request based on individual task needs**:
-```bash
-#SBATCH --mem=8G    # Per task, not total
-```
-
-### File Organization
-
-**Create output directories**:
-```bash
-$ mkdir -p logs results
-```
-
-**Organize by array job**:
-```bash
-#SBATCH --output=logs/array_$SLURM_ARRAY_JOB_ID/task_%a.out
-```
-
-Then:
-```bash
-$ mkdir -p logs/array_$SLURM_ARRAY_JOB_ID  # Before submitting
-```
 
 ## Troubleshooting
 
@@ -598,20 +534,6 @@ python visualize.py --input $OUTPUT_DIR/results.txt --output $OUTPUT_DIR/plot.pn
 
 echo "Task $SLURM_ARRAY_TASK_ID completed successfully"
 ```
-
-## Summary
-
-**Key points**:
-
-| Concept | Syntax |
-|---------|--------|
-| Basic array | `#SBATCH --array=1-100` |
-| With step | `#SBATCH --array=1-100:2` |
-| Limit concurrent | `#SBATCH --array=1-1000%50` |
-| Task ID variable | `$SLURM_ARRAY_TASK_ID` |
-| Output files | `#SBATCH --output=job_%A_%a.out` |
-| Cancel array | `scancel JOBID` |
-| Cancel task | `scancel JOBID_TASKID` |
 
 ## Questions?
 

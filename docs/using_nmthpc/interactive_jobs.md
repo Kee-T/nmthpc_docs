@@ -92,14 +92,14 @@ See [Running Jobs on GPU Nodes](gpu_jobs.md) for more GPU-specific information.
 
 **Request large memory**:
 ```bash
-$ srun --partition=highmem --mem=256G --time=03:00:00 --pty bash
+$ srun --partition=cpu.hm --mem=256G --time=03:00:00 --pty bash
 ```
 
-### Quick Testing (Debug Partition)
+### Quick Testing (Testing Partition)
 
 **Fast-start testing**:
 ```bash
-$ srun --partition=debug --ntasks=2 --time=00:30:00 --pty bash
+$ srun --partition=testing --ntasks=2 --time=00:30:00 --pty bash
 ```
 
 ## Interactive Applications
@@ -116,7 +116,7 @@ $ python
 
 ### Jupyter Notebooks
 
-For Jupyter notebooks, see [Python and Jupyter Notebooks](../software/python_jupyter.md) for detailed setup instructions.
+For Jupyter notebooks, see the section on Python and Jupyter notebooks for detailed setup instructions.
 
 ### R Interactive Session
 
@@ -180,72 +180,25 @@ $ module load paraview
 $ paraview  # Opens Paraview GUI
 ```
 
-```{note}
-X11 forwarding over network can be slow. For intensive visualization, consider using VNC or web-based tools.
-```
+
 
 ## Working in Interactive Sessions
 
-### Best Practices
-
-**1. Monitor your resource usage**:
+**Monitor your resource usage**:
 ```bash
 $ top -u $USER
 $ free -h
 ```
 
-**2. Work efficiently**:
-
-- Plan your work before starting the session
-- Keep notes of successful commands for batch scripts
-- Don't leave sessions idle
-
-**3. Extend time if needed**:
+**Extend time if needed**:
 
 If your session is about to expire, save your work and start a new session. You cannot extend an active interactive job.
 
-**4. Clean up**:
+**Clean up**:
 ```bash
 $ exit  # Always exit when done
 ```
 
-### Transferring Data During Interactive Sessions
-
-**From login node to compute node**:
-
-Files on shared filesystems (home, project directories) are accessible on compute nodes. No transfer needed.
-
-**From local machine**:
-
-Open another terminal and use scp/rsync to transfer to your home directory:
-```bash
-$ scp file.dat username@nmthpc.id.nmt.edu:~/
-```
-
-### Saving Your Interactive Work
-
-**Command history**:
-```bash
-$ history > commands.txt  # Save commands for later
-```
-
-**Create batch script from interactive commands**:
-
-Once you've tested interactively, create a batch script:
-
-```bash
-#!/bin/bash
-#SBATCH --ntasks=4
-#SBATCH --mem=16G
-#SBATCH --time=04:00:00
-
-module load python/3.11
-
-# Commands you tested interactively
-python my_script.py
-```
-
-See [Running Batch Jobs](batch_jobs.md) for more on batch job scripts.
 
 ## Troubleshooting
 
@@ -306,38 +259,6 @@ $ srun --mem=32G --pty bash  # Increased from 16G
 - Save work periodically
 - For very long work, use batch jobs
 
-## Advanced Interactive Usage
-
-### Running MPI Programs Interactively
-
-```bash
-$ srun --ntasks=8 --pty bash
-$ module load openmpi/4.1.4
-$ mpirun -np 8 ./my_mpi_program
-```
-
-### Multiple Interactive Jobs
-
-You can have multiple interactive jobs simultaneously:
-
-**Terminal 1**:
-```bash
-$ srun --ntasks=4 --mem=8G --pty bash
-```
-
-**Terminal 2** (in another SSH session):
-```bash
-$ srun --partition=gpu --gres=gpu:1 --mem=16G --pty bash
-```
-
-Check all your jobs:
-```bash
-$ squeue -u $USER
-```
-
-### Using Job Arrays Interactively
-
-Not recommended. Job arrays are designed for batch work. See [Using SLURM Job Arrays](job_arrays.md).
 
 ## When to Use Interactive vs. Batch Jobs
 
@@ -404,19 +325,6 @@ $ nvidia-smi
 # Exit and create batch script for full runs
 $ exit
 ```
-
-## Summary
-
-**Quick reference for interactive jobs**:
-
-| Task | Command |
-|------|---------|
-| Basic session | `srun --pty bash` |
-| With resources | `srun --ntasks=4 --mem=16G --time=02:00:00 --pty bash` |
-| GPU session | `srun --partition=gpu --gres=gpu:1 --pty bash` |
-| With X11 | `srun --x11 --pty bash` |
-| Check your jobs | `squeue -u $USER` |
-| Exit session | `exit` |
 
 ## Questions?
 

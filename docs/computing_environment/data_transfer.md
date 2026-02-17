@@ -174,9 +174,6 @@ $ scp -r data/ username@nmthpc.id.nmt.edu:~/destination/
 
 ## Troubleshooting
 
-### Transfer is Slow
-
-
 ### Permission Denied
 
 - Verify destination directory exists
