@@ -9,14 +9,14 @@ The NMT HPC cluster consists of:
 - **{{nmthpc_total_cpu_nodes}}** CPU compute nodes for general-purpose computing
 - **{{nmthpc_total_gpu_nodes}}** GPU nodes with {{nmthpc_gpu_type}} GPUs for accelerated workloads
 - Multiple login nodes for user access
-- Two high-performance filesystems: **{{nmthpc_filesystem_1}}** and **{{nmthpc_filesystem_1}}**
+- Two high-performance filesystems: **{{nmthpc_filesystem_1}}** 1 (backed up in **{{nmthpc_filesystem_1}}** 2) and **{{nmthpc_filesystem_2}}**
 
 ## Node Types
 
 ### Login Nodes
 
 Login nodes are your entry point to the cluster. When you SSH to NMTHPC, you connect to a login node.
-Your home directory will be in the **{{nmthpc_filesystem_1}}** filesystem, which is backed up (ZFS1 is backed up in a parallel filesystem ZFS2). 
+Your home directory will be in the **{{nmthpc_filesystem_1}}** filesystem, which is backed up (**{{nmthpc_filesystem_1}}** 1 is backed up in a parallel filesystem **{{nmthpc_filesystem_1}}** 2). 
 
 **Purpose**:
 
@@ -36,7 +36,7 @@ Your home directory will be in the **{{nmthpc_filesystem_1}}** filesystem, which
 - Compiling code
 - Submitting jobs with `sbatch` or `srun`
 - Checking job status with `squeue`
-- Light data processing (< 1 GB memory, < 10 minutes)
+- Light data processing 
 
 **Inappropriate uses**:
 
@@ -77,7 +77,7 @@ NMTHPC features {{nmthpc_total_gpu_nodes}} GPU nodes equipped with **{{nmthpc_gp
 
 **GPU Specifications**:
 
-- GPU Model: NVIDIA H100 and H200
+- GPU Model: NVIDIA **{{nmthpc_gpu_type}}**
 
 
 
@@ -129,6 +129,11 @@ Keep your home directory organized and clean. Regularly delete unnecessary files
 
 ### {{nmthpc_filesystem_2}} Filesystem
 
+This is a scratch file with no backup, periodically wiped. Do not store important data here!
+
+
+**Path**: Under `/data/username` 
+
 
 **Characteristics**:
 
@@ -144,11 +149,8 @@ Keep your home directory organized and clean. Regularly delete unnecessary files
 - Simulation input and output files
 - High I/O workloads
 
-
-
 This is a scratch space for temporary files needed during job execution.
 
-**Path**: Under `/data` 
 
 **Characteristics**:
 
