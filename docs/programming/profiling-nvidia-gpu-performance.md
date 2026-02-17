@@ -374,7 +374,7 @@ NVIDIA Nsight Compute is a command-line CUDA kernel profiler that provides detai
 
 ### Why do these metrics matter?
 
-Modern GPUs, such as the NVIDIA A100, have hundreds of compute units (Streaming Multiprocessors or SMs). To fully exploit this parallel architecture, your kernel must be configured to launch enough threads and blocks to keep these units busy.
+Modern GPUs, such as the NVIDIA H100, have hundreds of compute units (Streaming Multiprocessors or SMs). To fully exploit this parallel architecture, your kernel must be configured to launch enough threads and blocks to keep these units busy.
 
 Key Features:
 

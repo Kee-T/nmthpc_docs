@@ -106,7 +106,7 @@ NMTHPC provides multiple storage systems optimized for different use cases.
 **Characteristics**:
 
 - Personal storage space
-- Backed up regularly (verify backup with HPC support)
+- Backed up (verify backup with HPC support)
 - Limited quota
 - Accessible from all nodes
 

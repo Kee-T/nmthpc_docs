@@ -259,42 +259,7 @@ module load python/3.11
 python train_multi_gpu.py
 ```
 
-## GPU-Accelerated Applications
 
-### Molecular Dynamics (GROMACS)
-
-```bash
-#!/bin/bash
-#SBATCH --job-name=gromacs_gpu
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:1
-#SBATCH --ntasks=4
-#SBATCH --mem=32G
-#SBATCH --time=24:00:00
-
-module load gromacs/2023-gpu
-
-# Run with GPU acceleration
-gmx mdrun -deffnm md -nb gpu -pme gpu -bonded gpu -ntomp $SLURM_CPUS_PER_TASK
-```
-
-### Quantum Chemistry (VASP with GPU)
-
-```bash
-#!/bin/bash
-#SBATCH --job-name=vasp_gpu
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:1
-#SBATCH --ntasks=4
-#SBATCH --mem=64G
-#SBATCH --time=48:00:00
-
-module load vasp/6.4.0-gpu
-
-mpirun -np $SLURM_NTASKS vasp_gpu
-```
-
-See [VASP](../software/vasp.md) for more VASP examples.
 
 ## Optimizing GPU Usage
 
@@ -339,47 +304,7 @@ Check:
 - GPU-enabled version of software is loaded
 - Code detects GPU correctly
 
-## Mixed Precision Training
 
-H100 GPUs support fast mixed precision computations.
-
-### PyTorch Automatic Mixed Precision
-
-```python
-import torch
-from torch.cuda.amp import autocast, GradScaler
-
-model = MyModel().cuda()
-optimizer = torch.optim.Adam(model.parameters())
-scaler = GradScaler()
-
-for data, target in dataloader:
-    optimizer.zero_grad()
-
-    # Enable autocasting
-    with autocast():
-        output = model(data)
-        loss = criterion(output, target)
-
-    # Scale loss and backward
-    scaler.scale(loss).backward()
-    scaler.step(optimizer)
-    scaler.update()
-```
-
-**Job script**:
-```bash
-#!/bin/bash
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:1
-#SBATCH --mem=32G
-#SBATCH --time=12:00:00
-
-module load cuda/12.1
-module load python/3.11
-
-python train_mixed_precision.py
-```
 
 ## GPU Job Arrays
 

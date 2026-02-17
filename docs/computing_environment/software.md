@@ -184,22 +184,6 @@ $ R
 
 See [R](../software/r.md) for more details. Note: we recommend installing R using conda environments.
 
-## Containers (Singularity/Apptainer)
-
-For software not available as modules, consider using containers:
-
-```bash
-$ module load apptainer
-$ singularity pull docker://ubuntu:22.04
-$ singularity shell ubuntu_22.04.sif
-```
-
-**Advantages**:
-
-- Use software from Docker Hub
-- Create reproducible environments
-- Run complex software stacks
-
 ## Compiling Your Own Software
 
 You can compile software in your home directory:
@@ -264,9 +248,9 @@ Some software requires licenses:
 - **MATLAB**: Check license availability
 - **VASP**: Requires proof of license
 - **Intel Compilers**: Site license available
-- **Commercial software**: Contact HPC support
+- **Other commercial software**: Contact HPC support
 
-If you have a license for commercial software, contact HPC support about installation.
+If you have a license for commercial software, contact HPC support to inquire about installation.
 
 ## Frequently Asked Questions
 
