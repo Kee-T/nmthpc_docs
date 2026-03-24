@@ -33,7 +33,8 @@ Your home directory will be in the **{{nmthpc_filesystem_1}}** 1 filesystem, whi
 **Appropriate uses**:
 
 - Editing scripts with vim or nano
-- Compiling code
+- Compiling lightweight codes (single procesor, seconds)
+- Starting interactive jobs with `srun` to compile or test codes
 - Submitting jobs with `sbatch` or `srun`
 - Checking job status with `squeue`
 - Light data processing 
