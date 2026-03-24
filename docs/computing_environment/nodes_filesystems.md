@@ -70,6 +70,9 @@ NMTHPC features {{nmthpc_total_gpu_nodes}} GPU nodes equipped with **{{nmthpc_gp
 **GPU Specifications**:
 
 - GPU Model: NVIDIA **{{nmthpc_gpu_type}}**
+- Processor: Multi-core CPUs
+- Cores per node: 128
+- Memory: 6 Gb/core
 
 
 
