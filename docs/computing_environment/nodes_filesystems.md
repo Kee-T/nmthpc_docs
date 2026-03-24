@@ -103,9 +103,7 @@ NMTHPC provides multiple storage systems optimized for different use cases.
 - Job submission scripts
 
 **Quota**: Check your usage with:
-```bash
-$ quota -s
-```
+`df -h /home/username`, where `username` is your 900#.
 
 ```{tip}
 Keep your home directory organized and clean. Regularly delete unnecessary files to stay within quota limits.
@@ -157,28 +155,21 @@ Data in local scratch `\data` is periodically deleted (e.g., every 90 days) and 
 
 | Use Case | Recommended Location |
 |----------|---------------------|
-| Scripts and code | Home directory |
-| Small datasets  | Home directory |
-| Long-term project storage | {{nmthpc_filesystem_1}} |
-| Active large datasets | scratch {{nmthpc_filesystem_2}} |
-| Temporary files during jobs | scratch {{nmthpc_filesystem_2}} |
+| Scripts and code | `home` directory ({{nmthpc_filesystem_1}} 1) |
+| Small and medium datasets  | `home` directory ({{nmthpc_filesystem_1}} 1) |
+| Active large datasets | `data` {{nmthpc_filesystem_2}} |
+| Temporary files during jobs | `data` {{nmthpc_filesystem_2}} |
 
 ### Managing Disk Quotas
 
 Check your current usage:
-```bash
-$ quota -s
-```
+`df -h /home/username`
 
 View disk usage by directory:
-```bash
-$ du -h --max-depth=1 ~/
-```
+`du -h --max-depth=1 ~/`
 
 Find large files:
-```bash
-$ find ~/ -type f -size +1G
-```
+`find ~/ -type f -size +1G`
 
 ### Data Organization Tips
 
