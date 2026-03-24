@@ -27,7 +27,7 @@ Your home directory will be in the **{{nmthpc_filesystem_1}}** 1 filesystem, whi
 - Viewing results
 
 ```{warning}
-**Login nodes are shared resources.** Do not run computationally intensive tasks on login nodes. Use SLURM to submit jobs to compute nodes instead.
+**Login nodes are shared resources.** Do not run computationally intensive tasks on login nodes. Use SLURM to submit jobs to compute nodes or interactive jobs via `srun` to compile software.
 ```
 
 **Appropriate uses**:
