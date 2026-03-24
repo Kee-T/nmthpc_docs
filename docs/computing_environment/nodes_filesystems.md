@@ -16,7 +16,7 @@ The NMT HPC cluster consists of:
 ### Login Nodes
 
 Login nodes are your entry point to the cluster. When you SSH to NMTHPC, you connect to a login node.
-Your home directory will be in the **{{nmthpc_filesystem_1}}** filesystem, which is backed up (**{{nmthpc_filesystem_1}}** 1 is backed up in a parallel filesystem **{{nmthpc_filesystem_1}}** 2). 
+Your home directory will be in the **{{nmthpc_filesystem_1}}** 1 filesystem, which is automatically backed up to **{{nmthpc_filesystem_1}}** 2. 
 
 **Purpose**:
 
