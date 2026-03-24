@@ -155,10 +155,10 @@ Data in local scratch `\data` is periodically deleted (e.g., every 90 days) and 
 
 | Use Case | Recommended Location |
 |----------|---------------------|
-| Scripts and code | `home` directory ({{nmthpc_filesystem_1}} 1) |
-| Small and medium datasets  | `home` directory ({{nmthpc_filesystem_1}} 1) |
-| Active large datasets | `data` {{nmthpc_filesystem_2}} |
-| Temporary files during jobs | `data` {{nmthpc_filesystem_2}} |
+| Scripts and code | `/home/` directory ({{nmthpc_filesystem_1}} 1) |
+| Small and medium datasets  | `/home/` directory ({{nmthpc_filesystem_1}} 1) |
+| Active large datasets | `/data/` directory {{nmthpc_filesystem_2}} |
+| Temporary files during jobs | `/data/` directory {{nmthpc_filesystem_2}} |
 
 ### Managing Disk Quotas
 
