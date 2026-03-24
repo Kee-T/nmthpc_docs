@@ -163,13 +163,20 @@ Data in local scratch `\data` is periodically deleted (e.g., every 90 days) and 
 ### Managing Disk Quotas
 
 Check your current usage:
-`df -h /home/username`
+```bash
+$ df -h /home/username
+```
+
 
 View disk usage by directory:
-`du -h --max-depth=1 ~/`
+```bash
+$ du -h --max-depth=1 ~/
+```
 
 Find large files:
-`find ~/ -type f -size +1G`
+```bash
+$ find ~/ -type f -size +1G
+```
 
 ### Data Organization Tips
 
