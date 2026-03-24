@@ -47,7 +47,7 @@ Your home directory will be in the **{{nmthpc_filesystem_1}}** 1 filesystem, whi
 - Compiling computationally intensive software packages
 - Any task requiring significant CPU or memory
 
-### CPU Compute Nodes
+### CPU Compute Nodes (Standard and High-Memory)
 
 CPU compute nodes are designed for general-purpose parallel computing.
 
@@ -55,21 +55,11 @@ CPU compute nodes are designed for general-purpose parallel computing.
 
 - Processor: Multi-core CPUs
 - Cores per node: 256 
-- Memory: Varies by node type
+- Memory: 6 Gb/core (standard) or 12 Gb (high-memory)
 
 
 
 **Accessing CPU nodes**:
-
-Interactive:
-```bash
-$ srun --pty bash
-```
-
-Batch job:
-```bash
-$ sbatch cpu_job.sh
-```
 
 See [Running Interactive Jobs](../using_nmthpc/interactive_jobs.md) and [Running Batch Jobs](../using_nmthpc/batch_jobs.md) for details.
 
@@ -84,17 +74,6 @@ NMTHPC features {{nmthpc_total_gpu_nodes}} GPU nodes equipped with **{{nmthpc_gp
 
 
 **Requesting GPU resources**:
-
-Interactive:
-```bash
-$ srun --gres=gpu:1 --pty bash
-```
-
-Batch job script:
-```bash
-#SBATCH --gres=gpu:1
-#SBATCH --partition=gpu
-```
 
 See [Running Jobs on GPU Nodes](../using_nmthpc/gpu_jobs.md) for comprehensive guidance.
 
