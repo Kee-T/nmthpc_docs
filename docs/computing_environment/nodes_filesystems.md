@@ -37,13 +37,14 @@ Your home directory will be in the **{{nmthpc_filesystem_1}}** 1 filesystem, whi
 - Starting interactive jobs with `srun` to compile or test codes
 - Submitting jobs with `sbatch` or `srun`
 - Checking job status with `squeue`
-- Light data processing 
+- Light data processing (single processor)
 
 **Inappropriate uses**:
 
 - Running simulations or large-scale analyses
 - Training machine learning models
 - Processing large datasets
+- Compiling computationally intensive software packages
 - Any task requiring significant CPU or memory
 
 ### CPU Compute Nodes
