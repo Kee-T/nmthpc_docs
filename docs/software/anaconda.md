@@ -406,7 +406,7 @@ $ conda activate jupyter_env
 $ jupyter notebook --no-browser --ip=0.0.0.0
 ```
 
-See [Python and Jupyter Notebooks](python_jupyter.md) for detailed Jupyter instructions.
+<!-- See [Python and Jupyter Notebooks](python_jupyter.md) for detailed Jupyter instructions. --->
 
 ### Machine Learning Workflow
 
@@ -446,8 +446,8 @@ $ conda env export > ml_environment.yml
 
 ## Additional Resources
 
-- [Python and Jupyter Notebooks](python_jupyter.md)
-- [Training AI/ML Models on GPUs](ai_ml_gpu.md)
+<!-- - [Python and Jupyter Notebooks](python_jupyter.md) --->
+<!-- - [Training AI/ML Models on GPUs](ai_ml_gpu.md) --->
 - [Official Conda Documentation](https://docs.conda.io/)
 - [Conda Cheat Sheet PDF](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)
 

@@ -217,7 +217,7 @@ module load openmpi/4.1.4
 mpirun ./my_mpi_program
 ```
 
-See [Using MPI with Fortran](../software/mpi_fortran.md) for MPI examples.
+<!-- See [Using MPI with Fortran](../software/mpi_fortran.md) for MPI examples. --->
 
 ### Multithreaded Job (OpenMP)
 
@@ -584,7 +584,7 @@ For GPU computing, see [Running Jobs on GPU Nodes](gpu_jobs.md).
 
 For MPI and parallel programming:
 
-- [Using MPI with Fortran](../software/mpi_fortran.md)
+<!-- - [Using MPI with Fortran](../software/mpi_fortran.md) --->
 
 ## Job Script Template
 

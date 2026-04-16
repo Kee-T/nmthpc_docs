@@ -223,7 +223,7 @@ python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU')
 python train_model.py
 ```
 
-See [Training AI/ML Models on GPUs](../software/ai_ml_gpu.md) for comprehensive deep learning guidance.
+<!-- See [Training AI/ML Models on GPUs](../software/ai_ml_gpu.md) for comprehensive deep learning guidance. -->
 
 ### Multi-GPU Training
 
@@ -547,8 +547,8 @@ echo "Job completed at $(date)"
 
 ## Additional Resources
 
-- [Training AI/ML Models on GPUs](../software/ai_ml_gpu.md)
-- [Python and Jupyter Notebooks](../software/python_jupyter.md)
+<!-- - [Training AI/ML Models on GPUs](../software/ai_ml_gpu.md) --->
+<!-- - [Python and Jupyter Notebooks](../software/python_jupyter.md) --->
 - [Anaconda](../software/anaconda.md)
 
 ## Questions?
