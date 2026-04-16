@@ -87,7 +87,7 @@ $ module load intel-oneapi-compilers/2024.0.2-j5ujkki
 $ module load python/3.12.5-xondaab
 ```
 
-See [Python and Jupyter Notebooks](../software/python_jupyter.md) for detailed information.
+See [Python and Jupyter Notebooks](../software/python.md) for detailed information.
 
 **R**:
 ```bash
@@ -110,7 +110,7 @@ Note - this version of openmpi currently uses the version of gcc (11.5.0) that w
 $ module load intel-mpi/2021.6
 ```
 
-See [Using MPI with Fortran](../software/mpi_fortran.md) for MPI programming examples.
+<!-- See [Using MPI with Fortran](../software/mpi_fortran.md) for MPI programming examples. --->
 
 ### GPU Computing
 
@@ -131,7 +131,7 @@ $ module load hdf5/1.14.5-onz4pba
 
 **VASP** (Vienna Ab initio Simulation Package):
 ```bash
-$ module load vasp/6.4.0
+$ vasp/6.4.3-gcc-11.5.0-zraz3n2
 ```
 
 See [VASP](../software/vasp.md) for computational chemistry examples.
@@ -140,13 +140,12 @@ See [VASP](../software/vasp.md) for computational chemistry examples.
 ## Python Package Management
 
 
-
 ### Using Anaconda/Miniconda
 
 Anaconda is recommended for managing Python environments:
 ```bash
 $ module load anaconda
-$ conda create -n myenv python=3.11
+$ conda create -n myenv python=3.12.5
 $ conda activate myenv
 $ conda install numpy scipy matplotlib
 ```
@@ -157,7 +156,7 @@ See [Anaconda](../software/anaconda.md) for instructions.
 
 Install R packages in your home directory:
 ```bash
-$ module load r/4.3.0
+$ module load r/4.4.1
 $ R
 > install.packages("ggplot2", repos="https://cloud.r-project.org")
 ```
@@ -169,7 +168,7 @@ See [R](../software/r.md) for more details. Note: we recommend installing R usin
 You can compile software in your home directory:
 
 ```bash
-$ module load gcc/11.2.0
+$ module load gcc/14.2.0-y5jrcb6
 $ ./configure --prefix=$HOME/software/myapp
 $ make
 $ make install
@@ -270,10 +269,9 @@ Be cautious about loading modules automatically in `.bashrc`. This can cause iss
 ## Additional Resources
 
 - [Anaconda](../software/anaconda.md)
-- [Python and Jupyter Notebooks](../software/python_jupyter.md)
+- [Python and Jupyter Notebooks](../software/python.md)
 - [R](../software/r.md)
 - [MATLAB](../software/matlab.md)
-- [Using MPI with Fortran](../software/mpi_fortran.md)
 
 ## Questions?
 
