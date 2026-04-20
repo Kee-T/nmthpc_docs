@@ -38,12 +38,12 @@ Practical guides for running your computational work:
 Detailed guides for specific applications:
 
 - **[Anaconda](../software/anaconda.md)**: Python environment management
-- **[Python and Jupyter Notebooks](../software/python_jupyter.md)**: Interactive Python development
-- **[Training AI/ML Models on GPUs](../software/ai_ml_gpu.md)**: Machine learning workflows
+<!-- - **[Python and Jupyter Notebooks](../software/python_jupyter.md)**: Interactive Python development --->
+<!-- - **[Training AI/ML Models on GPUs](../software/ai_ml_gpu.md)**: Machine learning workflows --->
 - **[R](../software/r.md)**: Statistical computing with R
 - **[MATLAB](../software/matlab.md)**: Running MATLAB on the cluster
 - **[VASP](../software/vasp.md)**: Density functional theory calculations
-- **[Using MPI with Fortran](../software/mpi_fortran.md)**: Parallel programming
+<!-- - **[Using MPI with Fortran](../software/mpi_fortran.md)**: Parallel programming --->
 
 ## Tips for Finding Information
 
