@@ -12,16 +12,22 @@ NMTHPC uses the **Environment Modules** system to manage software. Modules allow
 ```bash
 $ module avail
 ```
-
+or 
+```bash
+$ module spider
+```
 **Search for specific software**:
 ```bash
 $ module avail python
-$ module avail cuda
+```
+or
+```bash
+$ module spider python
 ```
 
 **Load a module**:
 ```bash
-$ module load python/3.11
+$ module load python/3.12.5-xondaab
 ```
 
 **List currently loaded modules**:
@@ -31,7 +37,7 @@ $ module list
 
 **Unload a module**:
 ```bash
-$ module unload python/3.11
+$ module unload python/3.12.5-xondaab
 ```
 
 **Unload all modules**:
@@ -41,7 +47,11 @@ $ module purge
 
 **Display module information**:
 ```bash
-$ module show python/3.11
+$ module show python/3.12.5-xondaab
+```
+or
+```bash
+$ module spider python/3.12.5-xondaab
 ```
 
 **Get help with modules**:
@@ -52,7 +62,7 @@ $ module help
 ### Module Loading Best Practices
 
 1. **Load modules in your job scripts**: Always load required modules in your SLURM scripts
-2. **Specify versions**: Use specific versions for reproducibility (e.g., `python/3.11` not just `python`)
+2. **Specify versions**: Use specific versions for reproducibility (e.g., `python/3.12.5-xondaab` not just `python`)
 3. **Check dependencies**: Some modules automatically load dependencies
 4. **Clean environment**: Use `module purge` before loading modules to avoid conflicts
 
@@ -62,96 +72,66 @@ $ module help
 
 **GCC (GNU Compiler Collection)**:
 ```bash
-$ module load gcc/11.2.0
+$ module load gcc/14.2.0-y5jrcb6
 ```
 
 **Intel Compilers**:
 ```bash
-$ module load intel/2023
-```
-
-**NVIDIA HPC SDK** (includes nvcc for CUDA):
-```bash
-$ module load nvhpc/23.1
+$ module load intel-oneapi-compilers/2024.0.2-j5ujkki
 ```
 
 ### Programming Languages
 
 **Python**:
 ```bash
-$ module load python/3.11
+$ module load python/3.12.5-xondaab
 ```
 
-See [Python and Jupyter Notebooks](../software/python_jupyter.md) for detailed information.
+See [Python and Jupyter Notebooks](../software/python.md) for detailed information.
 
 **R**:
 ```bash
-$ module load r/4.3.0
+$ module load r/4.4.1-gcc-11.5.0-araotop
 ```
 
 See [R](../software/r.md) for detailed information.
-
-**Julia**:
-```bash
-$ module load julia/1.9
-```
 
 ### Parallel Computing Libraries
 
 **OpenMPI**:
 ```bash
-$ module load openmpi/4.1.4
+$ module load openmpi/4.1.6-52xkn4g
 ```
 
-**MPICH**:
-```bash
-$ module load mpich/4.0
-```
+Note - this version of openmpi currently uses the version of gcc (11.5.0) that was provided with the system (Rocky 9).
 
 **Intel MPI**:
 ```bash
 $ module load intel-mpi/2021.6
 ```
 
-See [Using MPI with Fortran](../software/mpi_fortran.md) for MPI programming examples.
+<!-- See [Using MPI with Fortran](../software/mpi_fortran.md) for MPI programming examples. --->
 
 ### GPU Computing
-
-**CUDA Toolkit**:
-```bash
-$ module load cuda/12.1
-```
 
 
 ### Mathematical and Scientific Libraries
 
 **BLAS/LAPACK** (Linear algebra):
 ```bash
-$ module load openblas/0.3.21
+$ module load openblas/0.3.28-x5wjuis
 ```
 
 **HDF5** (Hierarchical data format):
 ```bash
-$ module load hdf5/1.14.0
-```
-
-**NetCDF**:
-```bash
-$ module load netcdf/4.9.0
+$ module load hdf5/1.14.5-onz4pba
 ```
 
 ### Scientific Applications
 
-**MATLAB**:
-```bash
-$ module load matlab/R2023a
-```
-
-See [MATLAB](../software/matlab.md) for usage instructions.
-
 **VASP** (Vienna Ab initio Simulation Package):
 ```bash
-$ module load vasp/6.4.0
+$ vasp/6.4.3-gcc-11.5.0-zraz3n2
 ```
 
 See [VASP](../software/vasp.md) for computational chemistry examples.
@@ -160,13 +140,12 @@ See [VASP](../software/vasp.md) for computational chemistry examples.
 ## Python Package Management
 
 
-
 ### Using Anaconda/Miniconda
 
 Anaconda is recommended for managing Python environments:
 ```bash
 $ module load anaconda
-$ conda create -n myenv python=3.11
+$ conda create -n myenv python=3.12.5
 $ conda activate myenv
 $ conda install numpy scipy matplotlib
 ```
@@ -177,7 +156,7 @@ See [Anaconda](../software/anaconda.md) for instructions.
 
 Install R packages in your home directory:
 ```bash
-$ module load r/4.3.0
+$ module load r/4.4.1
 $ R
 > install.packages("ggplot2", repos="https://cloud.r-project.org")
 ```
@@ -189,7 +168,7 @@ See [R](../software/r.md) for more details. Note: we recommend installing R usin
 You can compile software in your home directory:
 
 ```bash
-$ module load gcc/11.2.0
+$ module load gcc/14.2.0-y5jrcb6
 $ ./configure --prefix=$HOME/software/myapp
 $ make
 $ make install
@@ -290,10 +269,9 @@ Be cautious about loading modules automatically in `.bashrc`. This can cause iss
 ## Additional Resources
 
 - [Anaconda](../software/anaconda.md)
-- [Python and Jupyter Notebooks](../software/python_jupyter.md)
+- [Python and Jupyter Notebooks](../software/python.md)
 - [R](../software/r.md)
 - [MATLAB](../software/matlab.md)
-- [Using MPI with Fortran](../software/mpi_fortran.md)
 
 ## Questions?
 

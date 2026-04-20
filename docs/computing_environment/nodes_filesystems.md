@@ -16,7 +16,7 @@ The NMT HPC cluster consists of:
 ### Login Nodes
 
 Login nodes are your entry point to the cluster. When you SSH to NMTHPC, you connect to a login node.
-Your home directory will be in the **{{nmthpc_filesystem_1}}** filesystem, which is backed up (**{{nmthpc_filesystem_1}}** 1 is backed up in a parallel filesystem **{{nmthpc_filesystem_1}}** 2). 
+Your home directory will be in the **{{nmthpc_filesystem_1}}** 1 filesystem, which is automatically backed up to **{{nmthpc_filesystem_1}}** 2. 
 
 **Purpose**:
 
@@ -27,25 +27,27 @@ Your home directory will be in the **{{nmthpc_filesystem_1}}** filesystem, which
 - Viewing results
 
 ```{warning}
-**Login nodes are shared resources.** Do not run computationally intensive tasks on login nodes. Use SLURM to submit jobs to compute nodes instead.
+**Login nodes are shared resources.** Do not run computationally intensive tasks on login nodes. Use SLURM to submit jobs to compute nodes or interactive jobs via `srun` to compile software.
 ```
 
 **Appropriate uses**:
 
 - Editing scripts with vim or nano
-- Compiling code
+- Compiling lightweight codes (single procesor, seconds)
+- Starting interactive jobs with `srun` to compile or test codes
 - Submitting jobs with `sbatch` or `srun`
 - Checking job status with `squeue`
-- Light data processing 
+- Light data processing (single processor)
 
 **Inappropriate uses**:
 
 - Running simulations or large-scale analyses
 - Training machine learning models
 - Processing large datasets
+- Compiling computationally intensive software packages
 - Any task requiring significant CPU or memory
 
-### CPU Compute Nodes
+### CPU Compute Nodes (Standard and High-Memory)
 
 CPU compute nodes are designed for general-purpose parallel computing.
 
@@ -53,21 +55,11 @@ CPU compute nodes are designed for general-purpose parallel computing.
 
 - Processor: Multi-core CPUs
 - Cores per node: 256 
-- Memory: Varies by node type
+- Memory: 6 Gb/core (standard) or 12 Gb (high-memory)
 
 
 
 **Accessing CPU nodes**:
-
-Interactive:
-```bash
-$ srun --pty bash
-```
-
-Batch job:
-```bash
-$ sbatch cpu_job.sh
-```
 
 See [Running Interactive Jobs](../using_nmthpc/interactive_jobs.md) and [Running Batch Jobs](../using_nmthpc/batch_jobs.md) for details.
 
@@ -78,21 +70,13 @@ NMTHPC features {{nmthpc_total_gpu_nodes}} GPU nodes equipped with **{{nmthpc_gp
 **GPU Specifications**:
 
 - GPU Model: NVIDIA **{{nmthpc_gpu_type}}**
+- Processor: Multi-core CPUs
+- Cores per node: 128
+- Memory: 6 Gb/core
 
 
 
 **Requesting GPU resources**:
-
-Interactive:
-```bash
-$ srun --gres=gpu:1 --pty bash
-```
-
-Batch job script:
-```bash
-#SBATCH --gres=gpu:1
-#SBATCH --partition=gpu
-```
 
 See [Running Jobs on GPU Nodes](../using_nmthpc/gpu_jobs.md) for comprehensive guidance.
 
@@ -119,9 +103,7 @@ NMTHPC provides multiple storage systems optimized for different use cases.
 - Job submission scripts
 
 **Quota**: Check your usage with:
-```bash
-$ quota -s
-```
+`df -h /home/username`, where `username` is your 900#.
 
 ```{tip}
 Keep your home directory organized and clean. Regularly delete unnecessary files to stay within quota limits.
@@ -173,18 +155,18 @@ Data in local scratch `\data` is periodically deleted (e.g., every 90 days) and 
 
 | Use Case | Recommended Location |
 |----------|---------------------|
-| Scripts and code | Home directory |
-| Small datasets  | Home directory |
-| Long-term project storage | {{nmthpc_filesystem_1}} |
-| Active large datasets | scratch {{nmthpc_filesystem_2}} |
-| Temporary files during jobs | scratch {{nmthpc_filesystem_2}} |
+| Scripts and code | `/home/` directory ({{nmthpc_filesystem_1}} 1) |
+| Small and medium datasets  | `/home/` directory ({{nmthpc_filesystem_1}} 1) |
+| Active large datasets | `/data/` directory ({{nmthpc_filesystem_2}}) |
+| Temporary files during jobs | `/data/` directory ({{nmthpc_filesystem_2}}) |
 
 ### Managing Disk Quotas
 
 Check your current usage:
 ```bash
-$ quota -s
+$ df -h /home/username
 ```
+
 
 View disk usage by directory:
 ```bash
