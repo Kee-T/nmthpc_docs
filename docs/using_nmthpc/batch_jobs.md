@@ -257,24 +257,6 @@ python analysis.py --input data.csv --output results.txt
 
 See [Anaconda](../software/anaconda.md) for more Python examples.
 
-### MATLAB Job
-
-```bash
-#!/bin/bash
-#SBATCH --job-name=matlab_sim
-#SBATCH --output=matlab_%j.out
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=16G
-#SBATCH --time=08:00:00
-
-module load matlab/R2023a
-
-matlab -nodisplay -nosplash -r "my_script; exit"
-```
-
-See [MATLAB](../software/matlab.md) for detailed MATLAB usage.
-
 ## Job Submission and Management
 
 ### Submitting Jobs

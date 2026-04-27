@@ -129,17 +129,6 @@ $ R
 
 See [R](../software/r.md) for more details.
 
-### MATLAB Interactive Session
-
-```bash
-$ srun --ntasks=4 --mem=16G --time=04:00:00 --pty bash
-$ module load matlab/R2023a
-$ matlab -nodisplay -nosplash
->> # MATLAB commands
-```
-
-See [MATLAB](../software/matlab.md) for more information.
-
 ## Using X11 Forwarding for GUI Applications
 
 ### Setup X11 Forwarding

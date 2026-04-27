@@ -271,7 +271,6 @@ Be cautious about loading modules automatically in `.bashrc`. This can cause iss
 - [Anaconda](../software/anaconda.md)
 - [Python and Jupyter Notebooks](../software/python.md)
 - [R](../software/r.md)
-- [MATLAB](../software/matlab.md)
 
 ## Questions?
 
