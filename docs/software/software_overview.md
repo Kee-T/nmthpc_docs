@@ -25,6 +25,6 @@ Here we provide a summary of the software packages currently available on NMTHPC
 | [OpenBLAS](https://www.openblas.net/) | 0.3.25, 0.3.28 (D) | OpenBLAS is an optimized Basic Linear Algebra Subprograms (BLAS) library based on GotoBLAS 21.13 BSD version. | 
 | [Open MPI](https://www.open-mpi.org/) | 4.0.7, 4.1.6, 5.0.5 (D) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. | 
 | [Python](https://www.python.org/) | 3.12.5 | Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. | 
-| [R](https://www.r-project.org/) | 4.4.1 | R is a programming language for statistical computing and graphics. | 
+| [R](https://www.r-project.org/) | 4.4.1 (D) | R is a programming language for statistical computing and graphics. | 
 | [Slurm](https://slurm.schedmd.com/overview.html) | 22.05.9, 23 (D) | Slurm (Simple Linux Utility for Resource Management) is an open-source workload manager and job scheduler used to allocate computing resources, schedule jobs, and manage batch and interactive workloads on HPC clusters. |
 | [VASP](https://vasp.at/) (L) | 6.4.3 (D) | VASP (Vienna Ab initio Simulation Package) is a first-principles simulation package for performing electronic structure calculations and atomistic materials modeling using density functional theory (DFT), molecular dynamics, and related methods. |
