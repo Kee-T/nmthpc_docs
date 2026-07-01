@@ -12,14 +12,14 @@ Here we provide a summary of the software packages currently available on NMTHPC
 
 | Application           | Version(s)          | Description      |
 | --------------------- | ------------------- | ---------------- |
-| [Anaconda](https://www.anaconda.com/products/distribution) | 2020.11, 2022.10, 2023.09 (D) | Anaconda is a distribution of the Python and R programming languages for scientific computing, that aims to simplify package management and deployment. 
+| [Anaconda](https://www.anaconda.com/products/distribution) | 2020.11, 2022.10, 2023.09 (D) | Anaconda is a distribution of the Python and R programming languages for scientific computing, that aims to simplify package management and deployment. |
 | [CPMD](https://github.com/CPMD-code) | 4.3 | The CPMD code is a parallelized plane wave / pseudopotential implementation of Density Functional Theory, particularly designed for ab-initio molecular dynamics. | 
-| [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) (G) | 11.2, 11.3, 11.4, 11.7, 11.8, 12.1.1 (D), 12.9* | The NVIDIA CUDA Toolkit includes GPU-accelerated libraries, debugging and optimization tools, a C/C++ compiler, and a runtime library to deploy your application. *Included in the `nvhpc_sdk/2025.255` module. Future CUDA versions will only be available through the NVIDIA HPC SDK module. | 
+| [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) (G) | 12.6 (via NVHPC 24.9) | The NVIDIA CUDA Toolkit includes GPU-accelerated libraries, debugging and optimization tools, a C/C++ compiler, and a runtime library to deploy your application. *Included in the `nvhpc/24.9` module. Future CUDA versions will only be available through the NVIDIA HPC module. | 
 | [gcc](https://gcc.gnu.org/) |  10.3.0, 13.3.0, 14.2.0 (D) |The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages (libstdc++,...).| 
-| [Git](https://git-scm.com/downloads) | 2.31.0 | Git is a distributed version control system that tracks changes in any set of computer files.| 
+| [Git](https://git-scm.com/downloads) | 2.47.3 | Git is a distributed version control system that tracks changes in any set of computer files.| 
 | [HDF5](https://www.hdfgroup.org/solutions/hdf5/) | 1.14.5 | HDF5 is a data model, library, and file format for storing and managing data.|
-| [Intel MPI (impi)](https://www.intel.com/content/www/us/en/developer/tools/oneapi/mpi-library.html#gs.nwdbyx) | 2021.4.0, 2021.5.0, 2021.13 | The Intel MPI Library is a multifabric message-passing library that implements the open source MPICH specification.| 
-| [OpenBLAS](https://www.openblas.net/) | 0.3.20, 0.3.28 | OpenBLAS is an optimized Basic Linear Algebra Subprograms (BLAS) library based on GotoBLAS 21.13 BSD version. | 
+| [Intel oneAPI](https://www.intel.com/content/www/us/en/developer/tools/oneapi/oneapi-toolkit.html) | Compilers 2024.0.2, Classic Compilers 2021.10.0, MKL 2024.2.2, MPI 2021.14.0 | Intel oneAPI provides a collection of performance libraries, compilers, and development tools for building high-performance applications on CPUs and accelerators. | 
+| [OpenBLAS](https://www.openblas.net/) | 0.3.25, 0.3.28 (D) | OpenBLAS is an optimized Basic Linear Algebra Subprograms (BLAS) library based on GotoBLAS 21.13 BSD version. | 
 | [Open MPI](https://www.open-mpi.org/) | 4.0.7, 4.1.6, 5.0.5 (D) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. | 
-| [Python](https://www.python.org/) | 2.7.18, 3.10.2 (D) |Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.| 
+| [Python](https://www.python.org/) | 3.12.5 |Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.| 
 | [R](https://www.r-project.org/) | 4.4.1 |R is a programming language for statistical computing and graphics.| 
