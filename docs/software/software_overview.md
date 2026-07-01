@@ -12,7 +12,7 @@ Here we provide a summary of the software packages currently available on NMTHPC
 
 | Application           | Version(s)          | Description      |
 | --------------------- | ------------------- | ---------------- |
-| [Anaconda](https://www.anaconda.com/products/distribution) | 2020.11, 2022.10, 2023.09 (D) | Anaconda is a distribution of the Python and R programming languages for scientific computing, that aims to simplify package management and deployment. 
+| [Anaconda](https://www.anaconda.com/products/distribution) | 2020.11, 2022.10, 2023.09 (D) | Anaconda is a distribution of the Python and R programming languages for scientific computing, that aims to simplify package management and deployment. |
 | [CPMD](https://github.com/CPMD-code) | 4.3 | The CPMD code is a parallelized plane wave / pseudopotential implementation of Density Functional Theory, particularly designed for ab-initio molecular dynamics. | 
 | [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) (G) | 12.6 (via NVHPC 24.9) | The NVIDIA CUDA Toolkit includes GPU-accelerated libraries, debugging and optimization tools, a C/C++ compiler, and a runtime library to deploy your application. *Included in the `nvhpc/24.9` module. Future CUDA versions will only be available through the NVIDIA HPC module. | 
 | [gcc](https://gcc.gnu.org/) |  10.3.0, 13.3.0, 14.2.0 (D) |The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages (libstdc++,...).| 
