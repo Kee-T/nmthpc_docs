@@ -12,7 +12,6 @@ Here we provide a summary of the software packages currently available on NMTHPC
 
 | Application           | Version(s)          | Description      |
 | --------------------- | ------------------- | ---------------- |
-| [Anaconda](https://www.anaconda.com/products/distribution) | 2020.11, 2022.10, 2023.09 (D) | Anaconda is a distribution of the Python and R programming languages for scientific computing, that aims to simplify package management and deployment. |
 | [Apptainer](https://apptainer.org) | 1.4.1 | Apptainer is a container platform for high-performance computing (HPC) that simplifies the creation and execution of containers, ensuring software components are encapsulated for portability and reproducibility. |
 | [Aspect](https://aspect.geodynamics.org) | 3.0.0 (D) | Aspect is an extensible code written in C++ to support research in simulating convection in the solid Earth and elsewhere. It provides the geosciences with a well-documented and extensible code base for their research needs. |
 | [CMake](https://cmake.org) | 3.20.6 | CMake is a cross-platform build system generator that automates the configuration, generation, and building of software projects using compiler-independent configuration files. |
