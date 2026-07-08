@@ -140,17 +140,17 @@ See [VASP](../software/vasp.md) for computational chemistry examples.
 ## Python Package Management
 
 
-### Using Anaconda/Miniconda
+### Using Miniforge/Conda
 
-Anaconda is recommended for managing Python environments:
+Miniforge provides a lightweight conda-based environment manager for creating and managing Python environments:
 ```bash
-$ module load anaconda
+$ module load miniforge3
 $ conda create -n myenv python=3.12.5
 $ conda activate myenv
 $ conda install numpy scipy matplotlib
 ```
 
-See [Anaconda](../software/anaconda.md) for instructions.
+
 
 ## R Package Installation
 
