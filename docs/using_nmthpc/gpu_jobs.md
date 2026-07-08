@@ -196,7 +196,7 @@ module load cuda/12.1
 module load python/3.11
 
 # Or use conda environment
-# module load anaconda3
+# module load miniforge3
 # source activate pytorch_env
 
 python train.py --epochs 100 --batch-size 64
