@@ -549,7 +549,7 @@ echo "Job completed at $(date)"
 
 <!-- - [Training AI/ML Models on GPUs](../software/ai_ml_gpu.md) --->
 <!-- - [Python and Jupyter Notebooks](../software/python_jupyter.md) --->
-- [Anaconda](../software/anaconda.md)
+- [Software Overview](../software/software_overview.md)
 
 ## Questions?
 
