@@ -87,7 +87,7 @@ $ module load intel-oneapi-compilers/2024.0.2-j5ujkki
 $ module load python/3.12.5-xondaab
 ```
 
-See [Python and Jupyter Notebooks](../software/python.md) for detailed information.
+See Python website for detailed information.
 
 **R**:
 ```bash
