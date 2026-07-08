@@ -255,7 +255,6 @@ conda activate myenv
 python analysis.py --input data.csv --output results.txt
 ```
 
-<!-- See [Anaconda](../software/anaconda.md) for more Python examples. -->
 
 ## Job Submission and Management
 
