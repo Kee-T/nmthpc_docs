@@ -268,7 +268,6 @@ Be cautious about loading modules automatically in `.bashrc`. This can cause iss
 
 ## Additional Resources
 
-- [Anaconda](../software/anaconda.md)
 - [Python and Jupyter Notebooks](../software/python.md)
 - [R](../software/r.md)
 
