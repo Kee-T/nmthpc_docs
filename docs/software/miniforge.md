@@ -41,7 +41,7 @@ View or edit the file with your preferred text editor:
 $ nano ~/.condarc
 ```
 
-After saving changes, Conda will automatically use the updated configuration.
+After saving changes, future Conda commands will automatically use the updated configuration.
 
 ## Creating Environments
 
