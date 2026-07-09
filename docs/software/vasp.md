@@ -36,7 +36,7 @@ $ module load vasp/6.4.3
 #SBATCH --mem-per-cpu=4G
 #SBATCH --time=24:00:00
 
-module load vasp/6.4.0
+module load vasp/6.4.3
 
 mpirun vasp_std
 ```
@@ -69,7 +69,7 @@ mpirun vasp_ncl
 #SBATCH --mem=64G
 #SBATCH --time=48:00:00
 
-module load vasp/6.4.0-gpu
+module load vasp/6.4.3-gpu
 
 mpirun vasp_gpu
 ```
