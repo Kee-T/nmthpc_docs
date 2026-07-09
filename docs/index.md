@@ -67,6 +67,7 @@ using_nmthpc/gpu_jobs
 :caption: Software and Examples
 
 software/software_overview
+software/miniforge
 software/r
 software/vasp
 software/spack
