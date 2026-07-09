@@ -17,9 +17,7 @@ $ module avail vasp
 $ module load vasp/6.4.3
 ```
 
-```{note}
 Loading the VASP module provides access to the VASP executables. If the executables are not available after loading the module, contact NMTHPC support.
-```
 
 ## Running VASP
 
