@@ -522,5 +522,5 @@ $ conda env export > ml_environment.yml
 
 ## Questions?
 
-For questions about Anaconda on NMTHPC, contact <hpc@nmthpc.atlassian.net>.
+For questions about Miniforge on NMTHPC, contact <hpc@nmthpc.atlassian.net>.
 
