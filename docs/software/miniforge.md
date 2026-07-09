@@ -73,6 +73,32 @@ $ conda activate data_analysis
 $ conda install scikit-learn seaborn
 ```
 
+### R Environment
+
+Create an environment with R:
+
+```bash
+conda create -n r_env r-base
+```
+
+Activate it:
+
+```bash
+conda activate r_env
+```
+
+Start an R session:
+
+```bash
+R
+```
+
+Install packages from CRAN as usual:
+
+```R
+install.packages("ggplot2")
+```
+
 ## Managing Packages
 
 ### Installing Packages
