@@ -298,6 +298,24 @@ $ conda create -n science python=3.11 \
     sympy numba h5py netcdf4
 ```
 
+## Using Mamba
+
+Mamba is a fast, drop-in replacement for Conda that can significantly reduce package installation time.
+
+Install Mamba into your environment:
+
+```bash
+conda install -c conda-forge mamba
+```
+
+Then replace `conda` commands with `mamba`:
+
+```bash
+mamba install numpy pandas scipy
+```
+
+Most Conda commands work the same with Mamba.
+
 ## Best Practices
 
 ### Environment Location
