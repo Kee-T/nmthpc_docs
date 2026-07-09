@@ -230,7 +230,7 @@ $ conda env create -f environment.yml
 
 ```bash
 $ srun --pty bash
-$ module load anaconda3
+$ module load miniforge3
 $ conda activate myenv
 $ python my_script.py
 ```
