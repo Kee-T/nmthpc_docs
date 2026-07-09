@@ -22,6 +22,8 @@ Miniforge provides the Conda package and environment manager, allowing users to 
 $ module load miniforge3
 ```
 
+Loading the `miniforge3` module makes the `conda` command available in your shell.
+
 **Verify installation**:
 ```bash
 $ conda --version
@@ -36,7 +38,7 @@ Conda stores its configuration in a file named `.condarc` located in your home d
 View or edit the file with your preferred text editor:
 
 ```bash
-nano ~/.condarc
+$ nano ~/.condarc
 ```
 
 After saving changes, Conda will automatically use the updated configuration.
@@ -78,19 +80,19 @@ $ conda install scikit-learn seaborn
 Create an environment with R:
 
 ```bash
-conda create -n r_env r-base
+$ conda create -n r_env r-base
 ```
 
 Activate it:
 
 ```bash
-conda activate r_env
+$ conda activate r_env
 ```
 
 Start an R session:
 
 ```bash
-R
+$ R
 ```
 
 Install packages from CRAN as usual:
@@ -305,13 +307,13 @@ Mamba is a fast, drop-in replacement for Conda that can significantly reduce pac
 Install Mamba into your environment:
 
 ```bash
-conda install -c conda-forge mamba
+$ conda install -c conda-forge mamba
 ```
 
 Then replace `conda` commands with `mamba`:
 
 ```bash
-mamba install numpy pandas scipy
+$ mamba install numpy pandas scipy
 ```
 
 Most Conda commands work the same with Mamba.
