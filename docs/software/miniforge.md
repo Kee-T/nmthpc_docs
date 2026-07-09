@@ -430,6 +430,14 @@ $ conda env remove -n unused_env
 $ conda clean --all
 ```
 
+### Package Conflicts
+
+If Conda cannot resolve package dependencies:
+
+- Install multiple packages together in a single `conda install` command.
+- Create a fresh environment instead of trying to repair a heavily modified one.
+- Consider using `mamba` for faster dependency resolution.
+
 **Contact HPC support** if you need more quota.
 
 ## Example Workflows
