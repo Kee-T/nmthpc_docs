@@ -2,6 +2,10 @@
 
 Miniforge is a lightweight Conda distribution that provides Python package and environment management. It is the recommended way to create and manage Conda environments on NMTHPC.
 
+## Python and R Support
+
+Miniforge provides the Conda package and environment manager, allowing users to create isolated environments for Python, R, and many other scientific applications. Using Conda environments helps avoid dependency conflicts and makes workflows easier to reproduce.
+
 ## Why Use Miniforge?
 
 **Benefits**:
