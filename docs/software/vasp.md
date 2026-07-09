@@ -14,7 +14,7 @@ Contact <hpc@nmthpc.atlassian.net> with your VASP license information.
 
 ```bash
 $ module avail vasp
-$ module load vasp/6.4.0
+$ module load vasp/6.4.3
 ```
 
 ## Running VASP
