@@ -22,6 +22,13 @@ Miniforge provides the Conda package and environment manager, allowing users to 
 $ module load miniforge3
 ```
 
+**Verify installation**:
+```bash
+$ conda --version
+$ which conda
+```
+
+
 ## Configuring Conda
 
 Conda stores its configuration in a file named `.condarc` located in your home directory (`~/.condarc`). This file controls where Conda stores environments and downloaded packages.
@@ -33,12 +40,6 @@ nano ~/.condarc
 ```
 
 After saving changes, Conda will automatically use the updated configuration.
-
-**Verify installation**:
-```bash
-$ conda --version
-$ which conda
-```
 
 ## Creating Environments
 
