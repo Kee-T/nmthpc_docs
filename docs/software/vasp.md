@@ -13,8 +13,8 @@ Contact <hpc@nmthpc.atlassian.net> with your VASP license information.
 ## Loading VASP
 
 ```bash
-$ module avail vasp
-$ module load vasp/6.4.3
+$ module avail external/vasp
+$ module load external/vasp/6.4.3
 ```
 
 Loading the VASP module provides access to the VASP executables. If the executables are not available after loading the module, contact NMTHPC support.
@@ -38,7 +38,7 @@ Loading the VASP module provides access to the VASP executables. If the executab
 #SBATCH --mem-per-cpu=4G
 #SBATCH --time=24:00:00
 
-module load vasp/6.4.3
+module load external/vasp/6.4.3
 
 mpirun vasp_std
 ```
