@@ -60,7 +60,7 @@ mpirun vasp_gam
 mpirun vasp_ncl
 ```
 
-## GPU-Accelerated VASP
+<!-- ## GPU-Accelerated VASP
 
 **For GPU nodes**:
 ```bash
@@ -74,7 +74,8 @@ mpirun vasp_ncl
 module load vasp/6.4.3-gpu
 
 mpirun vasp_gpu
-```
+``` 
+-->
 
 ## Example Calculations
 
