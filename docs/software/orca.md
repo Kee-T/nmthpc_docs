@@ -41,6 +41,10 @@ Submitted batch job <job_id>
 
 This should allow you to run a job on the cluster for the first time on the NMTHPC system. 
 
+## Additional Resources
+
+- [Official ORCA Documentation]([https://docs.conda.io/](https://www.faccts.de/orca/))
+
 ## Contact
 
 For questions about ORCA or assistance with running jobs on NMTHPC, contact <hpc@nmthpc.atlassian.net>.
