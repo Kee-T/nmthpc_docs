@@ -29,6 +29,8 @@ After submitting the job, you should receive output similar to:
 Submitted batch job <job_id>
 ```
 
+This should allow you to run a job on the cluster for the first time on the NMTHPC system. 
+
 ## Contact
 
 For questions about ORCA or assistance with running jobs on NMTHPC, contact <hpc@nmthpc.atlassian.net>.
