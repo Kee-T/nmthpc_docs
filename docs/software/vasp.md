@@ -13,9 +13,11 @@ Contact <hpc@nmthpc.atlassian.net> with your VASP license information.
 ## Loading VASP
 
 ```bash
-$ module avail vasp
-$ module load vasp/6.4.0
+$ module avail external/vasp
+$ module load external/vasp/6.4.3
 ```
+
+Loading the VASP module provides access to the VASP executables. If the executables are not available after loading the module, contact NMTHPC support.
 
 ## Running VASP
 
@@ -36,7 +38,7 @@ $ module load vasp/6.4.0
 #SBATCH --mem-per-cpu=4G
 #SBATCH --time=24:00:00
 
-module load vasp/6.4.0
+module load external/vasp/6.4.3
 
 mpirun vasp_std
 ```
@@ -58,7 +60,7 @@ mpirun vasp_gam
 mpirun vasp_ncl
 ```
 
-## GPU-Accelerated VASP
+<!-- ## GPU-Accelerated VASP
 
 **For GPU nodes**:
 ```bash
@@ -69,10 +71,11 @@ mpirun vasp_ncl
 #SBATCH --mem=64G
 #SBATCH --time=48:00:00
 
-module load vasp/6.4.0-gpu
+module load vasp/6.4.3-gpu
 
 mpirun vasp_gpu
-```
+``` 
+-->
 
 ## Example Calculations
 
