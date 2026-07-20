@@ -44,7 +44,7 @@ This should allow you to run a job on the cluster for the first time on the NMTH
 ## Additional Resources
 
 - [Official ORCA Documentation](https://www.faccts.de/orca/)
-- [Software Overview](software_overview.md)
+- [NMTHPC Software Overview](software_overview.md)
 
 ## Contact
 
