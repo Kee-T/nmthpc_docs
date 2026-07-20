@@ -43,7 +43,7 @@ This should allow you to run a job on the cluster for the first time on the NMTH
 
 ## Additional Resources
 
-- [Official ORCA Documentation]([https://docs.conda.io/](https://www.faccts.de/orca/))
+- [Official ORCA Documentation](https://www.faccts.de/orca/)
 
 ## Contact
 
