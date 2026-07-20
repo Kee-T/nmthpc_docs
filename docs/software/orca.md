@@ -9,6 +9,12 @@ $ module avail orca
 $ module load orca/6.1.1
 ```
 
+**Verify installation**:
+```bash
+$ orca --version
+$ which orca
+```
+
 ## Running ORCA
 
 ### Testing ORCA
