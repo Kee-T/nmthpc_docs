@@ -15,7 +15,9 @@ $ module load orca/6.1.1
 
 A sample ORCA job is available to verify that ORCA is functioning correctly on NMTHPC.
 
-[orca_test.tar.gz](https://github.com/user-attachments/files/30201358/orca_test.tar.gz)
+| File | Description |
+|------|-------------|
+| [orca_test.tar.gz](https://github.com/user-attachments/files/30201358/orca_test.tar.gz) | Sample ORCA test job for validating the installation. |
 
 Copy the test archive to your home directory, extract it, navigate to the test directory, and submit the provided SLURM job.
 
