@@ -25,7 +25,7 @@ A sample ORCA job is available for download to verify that ORCA is functioning c
 |------|-------------|
 | [orca_test.tar.gz](https://github.com/user-attachments/files/30201358/orca_test.tar.gz) | Sample ORCA test job for validating the installation. |
 
-Copy the test archive to your home directory, extract it, navigate to the test directory, and submit the provided SLURM job.
+Copy the test archive to your NMT HPC system home directory, extract it, navigate to the test directory, and submit the provided SLURM job.
 
 ```bash
 $ tar -xzvf orca_test.tar.gz
