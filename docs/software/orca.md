@@ -19,6 +19,12 @@ A sample ORCA job is available to verify that ORCA is functioning correctly on N
 |------|-------------|
 | [orca_test.tar.gz](https://github.com/user-attachments/files/30201358/orca_test.tar.gz) | Sample ORCA test job for validating the installation. |
 
+## Example Test Job
+
+| Resource | Description |
+|-----------|-------------|
+| 📦 **Download** | **[orca_test.tar.gz]([https://github.com/your-repo/path/orca_test.tar.gz](https://github.com/user-attachments/files/30201358/orca_test.tar.gz))** — Sample ORCA input files and Slurm job script for validating the installation. |
+
 Copy the test archive to your home directory, extract it, navigate to the test directory, and submit the provided SLURM job.
 
 ```bash
