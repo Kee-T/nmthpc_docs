@@ -41,6 +41,49 @@ Submitted batch job <job_id>
 
 This should allow you to run a job on the cluster for the first time on the NMTHPC system. 
 
+## Check the Output
+
+After the job completes, verify that the output file was created:
+
+```bash
+ls
+```
+
+Open the output file:
+
+```bash
+cat h2o.out
+```
+
+A successful ORCA calculation should display the ORCA banner followed by the calculation output and complete without runtime errors similar to:
+
+```text
+                                                  *****************
+                                                  * O   R   C   A *
+                                                  *****************
+
+                              #########################################################
+                              #                        -***-                          #
+                              #          Department of theory and spectroscopy        #
+                              #                                                       #
+                              #                      Frank Neese                      #
+                              #                                                       #
+                              #     Directorship, Architecture, Infrastructure        #
+                              #                    SHARK, DRIVERS                     #
+                              #        Core code/Algorithms in most modules           #
+                              #                                                       #
+                              #        Max Planck Institute fuer Kohlenforschung      #
+                              #                Kaiser Wilhelm Platz 1                 #
+                              #                 D-45470 Muelheim/Ruhr                 #
+                              #                      Germany                          #
+                              #                                                       #
+                              #                  All rights reserved                  #
+                              #                        -***-                          #
+                              #########################################################
+
+                                                [Calculation Output]
+```
+
 ## Additional Resources
 
 - [Official ORCA Documentation](https://www.faccts.de/orca/)
