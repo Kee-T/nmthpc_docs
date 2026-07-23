@@ -1,6 +1,6 @@
 # ORCA
 
-This guide covers using ORCA for quantum chemistry calculations on NMTHPC.
+This guide covers using ORCA for quantum chemistry calculations on the NMTHPC system.
 
 ## Loading ORCA
 
@@ -15,6 +15,8 @@ $ orca --version
 $ which orca
 ```
 
+This command displays the location of the ORCA executable. If ORCA is loaded successfully, it should return the path to the ORCA executable.
+
 ## Running ORCA
 
 ### Testing ORCA
@@ -25,12 +27,56 @@ A sample ORCA job is available for download to verify that ORCA is functioning c
 |------|-------------|
 | [orca_test.tar.gz](https://github.com/user-attachments/files/30201358/orca_test.tar.gz) | Sample ORCA test job for validating the installation. |
 
-Copy the test archive to your NMT HPC system home directory, untar it, change to testing directory, and submit the provided SLURM job.
+Open a new Terminal window on your local computer (not the SSH session) and copy the test archive to your NMTHPC system home directory.
+
+```bash
+$ scp /path/to/orca_test.tar.gz your_username@nmthpc_hostname:~
+```
+
+> ***NOTE***
+> 
+> Replace:
+> 
+> - `/path/to/orca_test.tar.gz` with the location of the file on your laptop.
+> 
+> - `your_username` with your NMTHPC username.
+> 
+> - `nmthpc_hostname` with the hostname you normally SSH into.
+
+The test archive should now be available on your NMTHPC system.
+
+Connect to the NMTHPC cluster via SSH and extract the archive into your NMTHPC system.
 
 ```bash
 $ tar -xzvf orca_test.tar.gz
-$ cd orca_test
-$ sbatch orca_test.sh
+```
+
+This command extracts the contents of the compressed archive and creates a new directory named `orca_test` containing the test files.
+
+Then, change your current working directory to the `orca_test` folder, where the sample input files and job script are located:
+
+```bash
+cd orca_test
+```
+
+List the files in the directory:
+
+```bash
+ls
+```
+
+You should see files similar to:
+
+```text
+h2o.inp
+orca_test.sh
+H2O_vac.gbw
+```
+
+Submit the test job to the Slurm scheduler:
+
+```bash
+sbatch orca_test.sh
 ```
 
 After submitting the job, you should receive output similar to:
@@ -49,7 +95,9 @@ After the job completes, verify that the output file was created:
 ls
 ```
 
-Open the output file:
+The output file `h2o.out` should be present.
+
+Display the output file:
 
 ```bash
 cat h2o.out
@@ -83,6 +131,8 @@ A successful ORCA calculation should display the ORCA banner followed by the cal
 
                                                 [Calculation Output]
 ```
+
+This test verifies that the ORCA module is available and that you can successfully submit and run jobs on the NMTHPC cluster.
 
 ## Additional Resources
 
